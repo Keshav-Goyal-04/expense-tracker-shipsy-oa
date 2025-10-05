@@ -23,20 +23,47 @@ export async function GET(req) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const expenses = await prisma.expense.findMany({
-      where: {
-        authorId: userId,
+    const { searchParams } = new URL(req.url);
+    const page = parseInt(searchParams.get('page') || '1');
+    const pageSize = parseInt(searchParams.get('pageSize') || '10');
+
+    const skip = (page - 1) * pageSize;
+    const take = pageSize;
+
+    const [expenses, totalExpenses] = await prisma.$transaction([
+      prisma.expense.findMany({
+        where: {
+          authorId: userId,
+        },
+        orderBy: [
+          {
+            date: 'desc',
+          },
+          {
+            createdAt: 'desc',
+          },
+        ],
+        skip,
+        take,
+      }),
+      prisma.expense.count({
+        where: {
+          authorId: userId,
+        },
+      }),
+    ]);
+
+    const totalPages = Math.ceil(totalExpenses / pageSize);
+
+    return NextResponse.json({
+      expenses,
+      pagination: {
+        page,
+        pageSize,
+        totalExpenses,
+        totalPages,
       },
-      orderBy: [
-        {
-          date: 'desc',
-        },
-        {
-          createdAt: 'desc',
-        },
-      ],
     });
-    return NextResponse.json({ expenses });
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }

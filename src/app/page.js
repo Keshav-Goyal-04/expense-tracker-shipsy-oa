@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Modal from '@/components/Modal';
 
 export default function Home() {
   const [expenses, setExpenses] = useState([]);
@@ -15,20 +16,24 @@ export default function Home() {
     date: new Date().toISOString().split('T')[0],
   });
   const [editingExpense, setEditingExpense] = useState(null);
+  const [pagination, setPagination] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    fetchExpenses();
-  }, []);
+    fetchExpenses(currentPage);
+  }, [currentPage]);
 
-  const fetchExpenses = async () => {
+  const fetchExpenses = async (page) => {
     try {
-      const response = await fetch('/api/expenses');
+      const response = await fetch(`/api/expenses?page=${page}&pageSize=10`);
       const data = await response.json();
       if (data.error) {
         setError(data.error);
       } else {
         setExpenses(data.expenses);
+        setPagination(data.pagination);
       }
     } catch (error) {
       setError(error.message);
@@ -60,7 +65,7 @@ export default function Home() {
       if (data.error) {
         setError(data.error);
       } else {
-        fetchExpenses();
+        fetchExpenses(currentPage);
         setNewExpense({
           title: '',
           description: '',
@@ -69,6 +74,7 @@ export default function Home() {
           tag: 'OTHER',
           date: new Date().toISOString().split('T')[0],
         });
+        setIsAddModalOpen(false);
       }
     } catch (error) {
       setError(error.message);
@@ -90,7 +96,7 @@ export default function Home() {
       if (data.error) {
         setError(data.error);
       } else {
-        fetchExpenses();
+        fetchExpenses(currentPage);
         setEditingExpense(null);
       }
     } catch (error) {
@@ -107,7 +113,7 @@ export default function Home() {
       if (data.error) {
         setError(data.error);
       } else {
-        fetchExpenses();
+        fetchExpenses(currentPage);
       }
     } catch (error) {
       setError(error.message);
@@ -128,19 +134,27 @@ export default function Home() {
       <div className="w-full max-w-4xl">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold">Expense Tracker</h1>
-          <button
-            onClick={handleLogout}
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Logout
-          </button>
+          <div>
+            <button
+              onClick={() => setIsAddModalOpen(true)}
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+            >
+              Add New Expense
+            </button>
+            <button
+              onClick={handleLogout}
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Logout
+            </button>
+          </div>
         </div>
 
         {error && <p className="text-red-500 mb-4">{error}</p>}
 
-        <div className="mb-8">
+        <Modal isOpen={isAddModalOpen} onClose={() => setIsAddModalOpen(false)}>
           <h2 className="text-2xl font-bold mb-4">Add New Expense</h2>
-          <form onSubmit={handleAddExpense} className="flex flex-col gap-4 bg-gray-100 p-4 rounded">
+          <form onSubmit={handleAddExpense} className="flex flex-col gap-4">
             <input
               type="text"
               name="title"
@@ -204,7 +218,7 @@ export default function Home() {
               Add Expense
             </button>
           </form>
-        </div>
+        </Modal>
 
         <div>
           <h2 className="text-2xl font-bold mb-4">Your Expenses</h2>
@@ -315,6 +329,27 @@ export default function Home() {
               </div>
             ))}
           </div>
+          {pagination && (
+            <div className="flex justify-between items-center mt-8">
+              <button
+                onClick={() => setCurrentPage(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-400"
+              >
+                Previous
+              </button>
+              <span>
+                Page {pagination.page} of {pagination.totalPages}
+              </span>
+              <button
+                onClick={() => setCurrentPage(currentPage + 1)}
+                disabled={pagination.page === pagination.totalPages}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-400"
+              >
+                Next
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </main>
