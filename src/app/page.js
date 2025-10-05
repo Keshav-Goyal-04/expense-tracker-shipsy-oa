@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Modal from '@/components/Modal';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import useDebounce from '@/hooks/useDebounce';
+import ExpensePieChart from '@/components/ExpensePieChart';
 import Select from 'react-select';
 
 const tagOptions = [
@@ -14,6 +15,19 @@ const tagOptions = [
   { value: 'ENTERTAINMENT', label: 'Entertainment' },
   { value: 'SALARY', label: 'Salary' },
   { value: 'OTHER', label: 'Other' },
+];
+
+const sortOptions = [
+  { value: 'date-desc', label: 'By latest' },
+  { value: 'date-asc', label: 'By oldest' },
+  { value: 'amount-desc', label: 'By largest amount' },
+  { value: 'amount-asc', label: 'By smallest amount' },
+];
+
+const typeOptions = [
+  { value: 'all', label: 'All' },
+  { value: 'true', label: 'Credit' },
+  { value: 'false', label: 'Debit' },
 ];
 
 function FilterSummary({ filters, onClear }) {
@@ -29,40 +43,40 @@ function FilterSummary({ filters, onClear }) {
   }
 
   return (
-    <div className="bg-gray-100 p-4 rounded mb-4">
-      <h3 className="text-lg font-semibold mb-2">Applied Filters</h3>
-      <div className="flex flex-wrap gap-2 items-center">
+    <div className="bg-card-background p-4 rounded-md mb-4 border border-border">
+      <h3 className="text-lg font-semibold mb-2 text-foreground">Applied Filters</h3>
+      <div className="flex flex-wrap gap-2 items-center text-muted-foreground">
         {filters.tags.length > 0 && (
-          <div className="bg-gray-200 p-2 rounded">
+          <div className="bg-border p-2 rounded-md text-sm">
             <strong>Tags:</strong> {filters.tags.map(t => t.label).join(', ')}
           </div>
         )}
         {filters.startDate && (
-          <div className="bg-gray-200 p-2 rounded">
+          <div className="bg-border p-2 rounded-md text-sm">
             <strong>Start Date:</strong> {filters.startDate}
           </div>
         )}
         {filters.endDate && (
-          <div className="bg-gray-200 p-2 rounded">
+          <div className="bg-border p-2 rounded-md text-sm">
             <strong>End Date:</strong> {filters.endDate}
           </div>
         )}
         {filters.minAmount && (
-          <div className="bg-gray-200 p-2 rounded">
+          <div className="bg-border p-2 rounded-md text-sm">
             <strong>Min Amount:</strong> {filters.minAmount}
           </div>
         )}
         {filters.maxAmount && (
-          <div className="bg-gray-200 p-2 rounded">
+          <div className="bg-border p-2 rounded-md text-sm">
             <strong>Max Amount:</strong> {filters.maxAmount}
           </div>
         )}
         {filters.isCredit !== 'all' && (
-          <div className="bg-gray-200 p-2 rounded">
+          <div className="bg-border p-2 rounded-md text-sm">
             <strong>Type:</strong> {filters.isCredit === 'true' ? 'Credit' : 'Debit'}
           </div>
         )}
-        <button onClick={onClear} className="text-red-500 hover:underline">Clear All</button>
+        <button onClick={onClear} className="text-primary hover:underline text-sm">Clear All</button>
       </div>
     </div>
   );
@@ -108,6 +122,7 @@ export default function Home() {
   });
   const [sortOption, setSortOption] = useState('date-desc');
   const [totalAmount, setTotalAmount] = useState(0);
+  const [tagDistribution, setTagDistribution] = useState([]);
 
   useEffect(() => {
     const tags = searchParams.get('tags');
@@ -176,6 +191,7 @@ export default function Home() {
         setExpenses(data.expenses);
         setPagination(data.pagination);
         setTotalAmount(data.totalAmount);
+        setTagDistribution(data.tagDistribution);
       }
     } catch (error) {
       setError(error.message);
@@ -196,8 +212,8 @@ export default function Home() {
     setModalFilters({ ...modalFilters, [name]: value });
   };
 
-  const handleSortChange = (e) => {
-    const value = e.target.value;
+  const handleSortChange = (selected) => {
+    const value = selected.value;
     setSortOption(value);
     const [sortBy, sortOrder] = value.split('-');
     const params = new URLSearchParams(searchParams);
@@ -344,25 +360,24 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-      <div className="w-full max-w-6xl">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold">Expense Tracker</h1>
-          <div>
-            <button
-              onClick={() => setIsAddModalOpen(true)}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
-            >
-              Add New Expense
-            </button>
-            <button
-              onClick={handleLogout}
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Logout
-            </button>
-          </div>
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-4xl font-bold text-foreground">Expense Tracker</h1>
+        <div className="flex gap-4">
+          <button
+            onClick={() => setIsAddModalOpen(true)}
+            className="bg-primary hover:bg-primary-hover text-foreground font-bold py-2 px-4 rounded-md transition-colors"
+          >
+            Add New Expense
+          </button>
+          <button
+            onClick={handleLogout}
+            className="bg-danger hover:bg-red-600 text-foreground font-bold py-2 px-4 rounded-md transition-colors"
+          >
+            Logout
+          </button>
         </div>
+      </div>
 
         {error && <p className="text-red-500 mb-4">{error}</p>}
 
@@ -376,14 +391,14 @@ export default function Home() {
               value={newExpense.title}
               onChange={handleInputChange}
               required
-              className="p-2 border rounded"
+              className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <textarea
               name="description"
               placeholder="Description"
               value={newExpense.description}
               onChange={handleInputChange}
-              className="p-2 border rounded"
+              className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <input
               type="number"
@@ -392,7 +407,7 @@ export default function Home() {
               value={newExpense.amount}
               onChange={handleInputChange}
               required
-              className="p-2 border rounded"
+              className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <div className="flex items-center gap-2">
               <input
@@ -400,9 +415,9 @@ export default function Home() {
                 name="isCredit"
                 checked={newExpense.isCredit}
                 onChange={handleInputChange}
-                className="h-4 w-4"
+                className="h-4 w-4 text-primary focus:ring-primary rounded border-border bg-card-background"
               />
-              <label>Is Credit (Income)</label>
+              <label className="text-muted-foreground">Is Credit (Income)</label>
             </div>
             <Select
               instanceId="add-expense-tags"
@@ -411,6 +426,7 @@ export default function Home() {
               isMulti
               onChange={(selected) => handleInputChange({ target: { name: 'tag', value: selected } })}
               value={newExpense.tag}
+              classNamePrefix="react-select"
             />
             <input
               type="date"
@@ -418,11 +434,11 @@ export default function Home() {
               value={newExpense.date}
               onChange={handleInputChange}
               required
-              className="p-2 border rounded"
+              className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-primary hover:bg-primary-hover text-foreground font-bold py-2 px-4 rounded-md transition-colors"
             >
               Add Expense
             </button>
@@ -439,13 +455,13 @@ export default function Home() {
                 value={editingExpense.title}
                 onChange={(e) => handleInputChange(e, true)}
                 required
-                className="p-2 border rounded"
+                className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <textarea
                 name="description"
                 value={editingExpense.description}
                 onChange={(e) => handleInputChange(e, true)}
-                className="p-2 border rounded"
+                className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <input
                 type="number"
@@ -453,7 +469,7 @@ export default function Home() {
                 value={editingExpense.amount}
                 onChange={(e) => handleInputChange(e, true)}
                 required
-                className="p-2 border rounded"
+                className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <div className="flex items-center gap-2">
                 <input
@@ -461,9 +477,9 @@ export default function Home() {
                   name="isCredit"
                   checked={editingExpense.isCredit}
                   onChange={(e) => handleInputChange(e, true)}
-                  className="h-4 w-4"
+                  className="h-4 w-4 text-primary focus:ring-primary rounded border-border bg-card-background"
                 />
-                <label>Is Credit (Income)</label>
+                <label className="text-muted-foreground">Is Credit (Income)</label>
               </div>
               <Select
                 instanceId="edit-expense-tags"
@@ -472,6 +488,7 @@ export default function Home() {
                 isMulti
                 onChange={(selected) => handleInputChange({ target: { name: 'tag', value: selected } }, true)}
                 value={editingExpense.tag}
+                classNamePrefix="react-select"
               />
               <input
                 type="date"
@@ -479,18 +496,18 @@ export default function Home() {
                 value={new Date(editingExpense.date).toISOString().split('T')[0]}
                 onChange={(e) => handleInputChange(e, true)}
                 required
-                className="p-2 border rounded"
+                className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <div className="flex gap-2">
                 <button
                   type="submit"
-                  className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                  className="bg-primary hover:bg-primary-hover text-foreground font-bold py-2 px-4 rounded-md transition-colors flex-grow"
                 >
                   Save
                 </button>
                 <button
                   onClick={() => setEditingExpense(null)}
-                  className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                  className="bg-muted-foreground hover:bg-gray-600 text-foreground font-bold py-2 px-4 rounded-md transition-colors flex-grow"
                 >
                   Cancel
                 </button>
@@ -500,77 +517,76 @@ export default function Home() {
         )}
 
         <Modal isOpen={isFilterModalOpen} onClose={() => setIsFilterModalOpen(false)}>
-          <h2 className="text-2xl font-bold mb-4">Filters</h2>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">Filters</h2>
           <div className="grid grid-cols-1 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700">Tags</label>
+              <label className="block text-sm font-medium text-muted-foreground mb-1">Tags</label>
               <Select
                 instanceId="tags-filter"
                 isMulti
                 options={tagOptions}
                 value={modalFilters.tags}
                 onChange={(selected) => handleFilterChange('tags', selected)}
+                classNamePrefix="react-select"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Date Range</label>
+              <label className="block text-sm font-medium text-muted-foreground mb-1">Date Range</label>
               <div className="flex gap-2">
                 <input
                   type="date"
                   value={modalFilters.startDate}
                   onChange={(e) => handleFilterChange('startDate', e.target.value)}
-                  className="p-2 border rounded w-full"
+                  className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary w-full"
                 />
                 <input
                   type="date"
                   value={modalFilters.endDate}
                   onChange={(e) => handleFilterChange('endDate', e.target.value)}
-                  className="p-2 border rounded w-full"
+                  className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary w-full"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Amount Range</label>
+              <label className="block text-sm font-medium text-muted-foreground mb-1">Amount Range</label>
               <div className="flex gap-2">
                 <input
                   type="number"
                   placeholder="Min"
                   value={modalFilters.minAmount}
                   onChange={(e) => handleFilterChange('minAmount', e.target.value)}
-                  className="p-2 border rounded w-full"
+                  className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary w-full"
                 />
                 <input
                   type="number"
                   placeholder="Max"
                   value={modalFilters.maxAmount}
                   onChange={(e) => handleFilterChange('maxAmount', e.target.value)}
-                  className="p-2 border rounded w-full"
+                  className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary w-full"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">Type</label>
-              <select
-                value={modalFilters.isCredit}
-                onChange={(e) => handleFilterChange('isCredit', e.target.value)}
-                className="p-2 border rounded w-full"
-              >
-                <option value="all">All</option>
-                <option value="true">Credit</option>
-                <option value="false">Debit</option>
-              </select>
+              <label className="block text-sm font-medium text-muted-foreground mb-1">Type</label>
+              <Select
+                instanceId="type-filter"
+                options={typeOptions}
+                value={typeOptions.find(option => option.value === modalFilters.isCredit)}
+                onChange={(selected) => handleFilterChange('isCredit', selected.value)}
+                classNamePrefix="react-select"
+              />
             </div>
           </div>
-          <div className="flex justify-end mt-4">
+          <div className="flex justify-end mt-4 gap-2">
             <button
               onClick={handleClearFiltersInModal}
-              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mr-2"
+              className="bg-muted-foreground hover:bg-gray-600 text-foreground font-bold py-2 px-4 rounded-md transition-colors"
             >
               Clear All
             </button>
             <button
               onClick={applyFilters}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-primary hover:bg-primary-hover text-foreground font-bold py-2 px-4 rounded-md transition-colors"
             >
               Apply Filters
             </button>
@@ -579,73 +595,75 @@ export default function Home() {
 
         <div>
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">Your Expenses</h2>
+            <h2 className="text-2xl font-bold text-foreground">Your Expenses</h2>
             <div className="text-2xl font-bold">
-              Total: <span className={totalAmount >= 0 ? 'text-green-500' : 'text-red-500'}>₹{totalAmount}</span>
+              Total: <span className={totalAmount >= 0 ? 'text-green-500' : 'text-red-400'}>₹{totalAmount}</span>
             </div>
           </div>
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-4 flex-wrap gap-4">
             <div className="flex items-center gap-4">
               <input
                 type="text"
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="p-2 border rounded"
+                className="p-3 border rounded-md bg-card-background border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <button
                 onClick={() => setIsFilterModalOpen(true)}
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+                className="bg-card-background hover:bg-border text-foreground font-bold py-2 px-4 rounded-md transition-colors"
               >
                 Filters
               </button>
-              <select
-                value={sortOption}
+              <Select
+                instanceId="sort-by-filter"
+                options={sortOptions}
+                value={sortOptions.find(option => option.value === sortOption)}
                 onChange={handleSortChange}
-                className="p-2 border rounded"
-              >
-                <option value="date-desc">By latest</option>
-                <option value="date-asc">By oldest</option>
-                <option value="amount-desc">By largest amount</option>
-                <option value="amount-asc">By smallest amount</option>
-              </select>
+                classNamePrefix="react-select"
+              />
             </div>
           </div>
+          <div className="max-w-sm mx-auto">
+            <ExpensePieChart data={tagDistribution} />
+          </div>
           <FilterSummary filters={appliedFilters} onClear={clearFilters} />
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-white">
-              <thead className="bg-gray-800 text-white">
+          <div className="overflow-x-auto bg-card-background rounded-md shadow-lg">
+            <table className="min-w-full">
+              <thead className="bg-gray-200">
                 <tr>
-                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm">#</th>
-                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm">Title</th>
-                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm">Description</th>
-                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm">Amount</th>
-                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm">Tag</th>
-                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm">Date</th>
-                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm">Actions</th>
+                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm text-gray-800">#</th>
+                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm text-gray-800">Title</th>
+                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm text-gray-800">Description</th>
+                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm text-gray-800">Amount</th>
+                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm text-gray-800">Tag</th>
+                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm text-gray-800">Date</th>
+                  <th className="text-left py-3 px-4 uppercase font-semibold text-sm text-gray-800">Actions</th>
                 </tr>
               </thead>
-              <tbody className="text-gray-700">
+              <tbody className="text-foreground">
                 {expenses.map((expense, index) => (
-                  <tr key={expense.id} className={index % 2 === 0 ? 'bg-gray-100' : ''}>
+                  <tr key={expense.id} className={index % 2 === 0 ? 'bg-card-background' : 'bg-alternate-row'}>
                     <td className="text-left py-3 px-4">{(pagination.page - 1) * pagination.pageSize + index + 1}</td>
                     <td className="text-left py-3 px-4">{expense.title}</td>
                     <td className="text-left py-3 px-4">{expense.description}</td>
-                    <td className={`text-left py-3 px-4 ${expense.isCredit ? 'text-green-500' : 'text-red-500'}`}>
-                      {expense.isCredit ? '+' : '-'}₹{expense.amount}
+                    <td className="text-left py-3 px-4">
+                      <span className={expense.isCredit ? 'text-green-500' : 'text-red-400'}>
+                        {expense.isCredit ? '+' : '-'}₹{expense.amount}
+                      </span>
                     </td>
-                    <td className="text-left py-3 px-4">{expense.tag}</td>
+                    <td className="text-left py-3 px-4"><span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">{expense.tag}</span></td>
                     <td className="text-left py-3 px-4">{new Date(expense.date).toLocaleDateString('en-GB')}</td>
-                    <td className="text-left py-3 px-4 flex items-center">
+                    <td className="text-left py-3 px-4 flex items-center gap-2">
                       <button
                         onClick={() => openEditModal(expense)}
-                        className="text-gray-600 hover:text-gray-900 mr-2"
+                        className="text-muted-foreground hover:text-primary transition-colors p-1 rounded-md"
                       >
                         <FaEdit />
                       </button>
                       <button
                         onClick={() => handleDeleteExpense(expense.id)}
-                        className="text-gray-600 hover:text-gray-900"
+                        className="text-muted-foreground hover:text-danger transition-colors p-1 rounded-md"
                       >
                         <FaTrash />
                       </button>
@@ -660,24 +678,23 @@ export default function Home() {
               <button
                 onClick={() => setCurrentPage(currentPage - 1)}
                 disabled={currentPage === 1}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-400"
+                className="bg-primary hover:bg-primary-hover text-foreground font-bold py-2 px-4 rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Previous
               </button>
-              <span>
+              <span className="text-muted-foreground">
                 Page {pagination.page} of {pagination.totalPages}
               </span>
               <button
                 onClick={() => setCurrentPage(currentPage + 1)}
                 disabled={pagination.page === pagination.totalPages}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:bg-gray-400"
+                className="bg-primary hover:bg-primary-hover text-foreground font-bold py-2 px-4 rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Next
               </button>
             </div>
           )}
-        </div>
-      </div>
-    </main>
-  );
-}
+              </div>
+            </div>
+          );
+        }

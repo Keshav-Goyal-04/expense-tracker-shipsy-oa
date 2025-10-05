@@ -77,7 +77,7 @@ export async function GET(req) {
     }
     orderBy.push({ createdAt: 'desc' });
 
-    const [expenses, totalExpenses, totalAmountResult] = await prisma.$transaction([
+    const [expenses, totalExpenses, totalAmountResult, tagDistribution] = await prisma.$transaction([
       prisma.expense.findMany({
         where,
         orderBy,
@@ -94,13 +94,24 @@ export async function GET(req) {
           amount: true,
         },
       }),
+      prisma.expense.groupBy({
+        by: ['tag'],
+        where: { ...where, isCredit: false }, // Only group debits for the pie chart
+        _sum: {
+          amount: true,
+        },
+      }),
     ]);
 
     const totalCredit = totalAmountResult.find(item => item.isCredit === true)?._sum.amount || 0;
     const totalDebit = totalAmountResult.find(item => item.isCredit === false)?._sum.amount || 0;
     const totalAmount = totalCredit - totalDebit;
+    const totalIncome = totalCredit;
+    const totalExpense = totalDebit;
 
     const totalPages = Math.ceil(totalExpenses / pageSize);
+
+    const formattedTagDistribution = tagDistribution.map(item => ({ tag: item.tag, amount: item._sum.amount }));
 
     return NextResponse.json({
       expenses,
@@ -111,6 +122,9 @@ export async function GET(req) {
         totalPages,
       },
       totalAmount,
+      totalIncome,
+      totalExpense,
+      tagDistribution: formattedTagDistribution,
     });
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
