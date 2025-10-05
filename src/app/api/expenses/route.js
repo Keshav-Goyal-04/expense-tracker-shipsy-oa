@@ -16,6 +16,79 @@ async function getUserIdFromToken(req) {
   }
 }
 
+/**
+ * @swagger
+ * /api/expenses:
+ *   get:
+ *     summary: Retrieves a paginated list of expenses with optional filters
+ *     tags:
+ *       - Expenses
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *         description: The page number to retrieve
+ *       - in: query
+ *         name: pageSize
+ *         schema:
+ *           type: integer
+ *         description: The number of expenses to retrieve per page
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *         description: A search term to filter expenses by title or description
+ *       - in: query
+ *         name: tags
+ *         schema:
+ *           type: string
+ *         description: A comma-separated list of tags to filter expenses by
+ *       - in: query
+ *         name: startDate
+ *         schema:
+ *           type: string
+ *           format: date
+ *         description: The start date of the date range to filter expenses by
+ *       - in: query
+ *         name: endDate
+ *         schema:
+ *           type: string
+ *           format: date
+ *         description: The end date of the date range to filter expenses by
+ *       - in: query
+ *         name: minAmount
+ *         schema:
+ *           type: number
+ *         description: The minimum amount to filter expenses by
+ *       - in: query
+ *         name: maxAmount
+ *         schema:
+ *           type: number
+ *         description: The maximum amount to filter expenses by
+ *       - in: query
+ *         name: isCredit
+ *         schema:
+ *           type: string
+ *         description: Filter by credit or debit
+ *       - in: query
+ *         name: sortBy
+ *         schema:
+ *           type: string
+ *         description: The field to sort by
+ *       - in: query
+ *         name: sortOrder
+ *         schema:
+ *           type: string
+ *         description: The sort order (asc or desc)
+ *     responses:
+ *       200:
+ *         description: A list of expenses
+ *       401:
+ *         description: Unauthorized
+ *       500:
+ *         description: Internal server error
+ */
 export async function GET(req) {
   try {
     const userId = await getUserIdFromToken(req);
@@ -131,6 +204,43 @@ export async function GET(req) {
   }
 }
 
+/**
+ * @swagger
+ * /api/expenses:
+ *   post:
+ *     summary: Creates a new expense
+ *     tags:
+ *       - Expenses
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *               description:
+ *                 type: string
+ *               amount:
+ *                 type: number
+ *               isCredit:
+ *                 type: boolean
+ *               tag:
+ *                 type: string
+ *               date:
+ *                 type: string
+ *                 format: date
+ *     responses:
+ *       201:
+ *         description: Expense created successfully
+ *       400:
+ *         description: Missing required fields
+ *       401:
+ *         description: Unauthorized
+ *       500:
+ *         description: Internal server error
+ */
 export async function POST(req) {
   try {
     const userId = await getUserIdFromToken(req);

@@ -16,6 +16,52 @@ async function getUserIdFromToken(req) {
   }
 }
 
+/**
+ * @swagger
+ * /api/expenses/{id}:
+ *   put:
+ *     summary: Updates an existing expense
+ *     tags:
+ *       - Expenses
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: The ID of the expense to update
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *               description:
+ *                 type: string
+ *               amount:
+ *                 type: number
+ *               isCredit:
+ *                 type: boolean
+ *               tag:
+ *                 type: string
+ *               date:
+ *                 type: string
+ *                 format: date
+ *     responses:
+ *       200:
+ *         description: Expense updated successfully
+ *       400:
+ *         description: Missing required fields
+ *       401:
+ *         description: Unauthorized
+ *       404:
+ *         description: Expense not found or unauthorized
+ *       500:
+ *         description: Internal server error
+ */
 export async function PUT(req, { params }) {
   try {
     const userId = await getUserIdFromToken(req);
@@ -53,6 +99,30 @@ export async function PUT(req, { params }) {
   }
 }
 
+/**
+ * @swagger
+ * /api/expenses/{id}:
+ *   delete:
+ *     summary: Deletes an expense
+ *     tags:
+ *       - Expenses
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: The ID of the expense to delete
+ *     responses:
+ *       200:
+ *         description: Expense deleted successfully
+ *       401:
+ *         description: Unauthorized
+ *       404:
+ *         description: Expense not found or unauthorized
+ *       500:
+ *         description: Internal server error
+ */
 export async function DELETE(req, { params }) {
   try {
     const userId = await getUserIdFromToken(req);

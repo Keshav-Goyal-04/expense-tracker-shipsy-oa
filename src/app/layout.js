@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import WarningSuppressor from "@/components/WarningSuppressor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <main className="min-h-screen p-4 md:p-8">
-          {children}
+          <WarningSuppressor>{children}</WarningSuppressor>
         </main>
       </body>
     </html>
