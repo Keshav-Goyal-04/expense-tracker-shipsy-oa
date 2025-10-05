@@ -634,7 +634,7 @@ export default function Home() {
                       {expense.isCredit ? '+' : '-'}₹{expense.amount}
                     </td>
                     <td className="text-left py-3 px-4">{expense.tag}</td>
-                    <td className="text-left py-3 px-4">{new Date(expense.date).toLocaleDateString()}</td>
+                    <td className="text-left py-3 px-4">{new Date(expense.date).toLocaleDateString('en-GB')}</td>
                     <td className="text-left py-3 px-4 flex items-center">
                       <button
                         onClick={() => openEditModal(expense)}
