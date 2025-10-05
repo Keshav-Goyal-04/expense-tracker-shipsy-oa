@@ -12,6 +12,7 @@ const tagOptions = [
   { value: 'TRAVEL', label: 'Travel' },
   { value: 'BILLS', label: 'Bills' },
   { value: 'ENTERTAINMENT', label: 'Entertainment' },
+  { value: 'SALARY', label: 'Salary' },
   { value: 'OTHER', label: 'Other' },
 ];
 

@@ -37,5 +37,6 @@ enum ExpenseTag {
   TRAVEL
   BILLS
   ENTERTAINMENT
+  SALARY
   OTHER
 }
