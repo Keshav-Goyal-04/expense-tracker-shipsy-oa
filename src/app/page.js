@@ -355,7 +355,7 @@ export default function Home() {
   };
 
   const openEditModal = (expense) => {
-    setEditingExpense(expense);
+    setEditingExpense({ ...expense, tag: Array.isArray(expense.tag) ? expense.tag[0].value : expense.tag });
     setIsEditModalOpen(true);
   };
 
@@ -423,9 +423,8 @@ export default function Home() {
               instanceId="add-expense-tags"
               name="tag"
               options={tagOptions}
-              isMulti
-              onChange={(selected) => handleInputChange({ target: { name: 'tag', value: selected } })}
-              value={newExpense.tag}
+              onChange={(selected) => handleInputChange({ target: { name: 'tag', value: selected.value } })}
+              value={tagOptions.find(option => option.value === newExpense.tag)}
               classNamePrefix="react-select"
             />
             <input
@@ -485,9 +484,8 @@ export default function Home() {
                 instanceId="edit-expense-tags"
                 name="tag"
                 options={tagOptions}
-                isMulti
-                onChange={(selected) => handleInputChange({ target: { name: 'tag', value: selected } }, true)}
-                value={editingExpense.tag}
+                onChange={(selected) => handleInputChange({ target: { name: 'tag', value: selected.value } }, true)}
+                value={tagOptions.find(option => option.value === editingExpense.tag)}
                 classNamePrefix="react-select"
               />
               <input
