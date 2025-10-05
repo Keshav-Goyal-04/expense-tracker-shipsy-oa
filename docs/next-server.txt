@@ -1,0 +1,3086 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Keshav Goyal> F:
+PS F:\> cd '.\SHIPSY PROJECT\'
+PS F:\SHIPSY PROJECT> npm run dev
+npm error code ENOENT
+npm error syscall open
+npm error path F:\SHIPSY PROJECT\package.json
+npm error errno -4058
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error enoent
+
+npm error A complete log of this run can be found in: C:\Users\Keshav Goyal\AppData\Local\npm-cache\_logs\2025-10-05T08_01_47_791Z-debug-0.log
+PS F:\SHIPSY PROJECT> dir
+
+
+    Directory: F:\SHIPSY PROJECT
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        05-10-2025     13:30                expense-tracker-app
+
+
+PS F:\SHIPSY PROJECT> cd .\expense-tracker-app\
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 10.3s (626 modules)
+ GET / 200 in 12041ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 937ms (378 modules)
+ GET /favicon.ico 200 in 1375ms
+ ✓ Compiled in 595ms (247 modules)
+ GET / 200 in 204ms
+   Reload env: .env.local
+ ✓ Compiled in 431ms (594 modules)
+ GET / 200 in 279ms
+ ✓ Compiled in 211ms (247 modules)
+ ✓ Compiled in 171ms (247 modules)
+ GET / 200 in 175ms
+ GET / 200 in 97ms
+ ✓ Compiled in 199ms (247 modules)
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 4.4s (934 modules)
+ GET / 500 in 5438ms
+ GET / 200 in 178ms
+ GET / 200 in 48ms
+ GET / 200 in 53ms
+ GET / 200 in 41ms
+ GET / 200 in 357ms
+ ✓ Compiled in 1308ms (911 modules)
+ GET / 200 in 439ms
+
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 1368ms (557 modules)
+ GET / 200 in 2305ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 752ms (352 modules)
+ GET /favicon.ico 200 in 1186ms
+ ○ Compiling /api/db-version ...
+ ✓ Compiled /api/db-version in 1734ms (596 modules)
+ GET / 200 in 2960ms
+ GET /api/db-version 200 in 5949ms
+ ✓ Compiled in 1040ms (237 modules)
+ GET / 200 in 131ms
+   Reload env: .env
+ ✓ Compiled in 648ms (558 modules)
+ GET / 200 in 320ms
+ ✓ Compiled in 493ms (237 modules)
+ GET / 200 in 127ms
+ ✓ Compiled in 350ms (237 modules)
+ GET / 200 in 154ms
+ ✓ Compiled in 435ms (237 modules)
+ ✓ Compiled in 320ms (237 modules)
+ GET / 200 in 333ms
+ GET / 200 in 80ms
+ ✓ Compiled in 195ms (237 modules)
+ ✓ Compiled in 167ms (237 modules)
+ GET / 200 in 154ms
+ GET / 200 in 75ms
+ ✓ Compiled in 194ms (237 modules)
+ GET / 200 in 222ms
+ ✓ Compiled in 668ms (558 modules)
+ GET / 200 in 606ms
+ GET / 200 in 42ms
+ ✓ Compiled in 235ms (237 modules)
+ GET / 200 in 201ms
+ ✓ Compiled in 531ms (558 modules)
+ GET / 200 in 485ms
+ GET / 200 in 46ms
+ GET / 200 in 367ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 583ms (352 modules)
+ GET /favicon.ico 200 in 840ms
+ ✓ Compiled in 1467ms (589 modules)
+ GET / 200 in 270ms
+ ✓ Compiled /api/users in 368ms (581 modules)
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\@prisma\client\default.js
+- F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js
+    at @prisma/client (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:119:18)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.js:5:72)
+    at <unknown> (rsc)/./src/lib/prisma.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:54:1)
+    at eval (webpack-internal:///(rsc)/./src/app/api/users/route.js:6:69)
+    at <unknown> (rsc)/./src/app/api/users/route.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:43:1)
+    at __webpack_exec__ (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:173:39)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:83)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:47)
+    at Object.<anonymous> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:177:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/users'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 5.2s (921 modules)
+ GET / 200 in 3419ms
+ GET /api/users 500 in 7256ms
+ GET / 200 in 491ms
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\@prisma\client\default.js
+- F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js
+    at @prisma/client (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:119:18)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.js:5:72)
+    at <unknown> (rsc)/./src/lib/prisma.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:54:1)
+    at eval (webpack-internal:///(rsc)/./src/app/api/users/route.js:6:69)
+    at <unknown> (rsc)/./src/app/api/users/route.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:43:1)
+    at __webpack_exec__ (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:173:39)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:83)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:47)
+    at Object.<anonymous> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:177:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/users'
+}
+ GET /api/users 500 in 493ms
+ GET / 200 in 530ms
+ GET /favicon.ico 200 in 69ms
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\@prisma\client\default.js
+- F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js
+    at @prisma/client (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:119:18)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.js:5:72)
+    at <unknown> (rsc)/./src/lib/prisma.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:54:1)
+    at eval (webpack-internal:///(rsc)/./src/app/api/users/route.js:6:69)
+    at <unknown> (rsc)/./src/app/api/users/route.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:43:1)
+    at __webpack_exec__ (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:173:39)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:83)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:47)
+    at Object.<anonymous> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:177:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/users'
+}
+ GET /api/users 500 in 253ms
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.8s
+ ○ Compiling / ...
+ ✓ Compiled / in 1679ms (557 modules)
+ GET / 200 in 3049ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 607ms (352 modules)
+ GET /favicon.ico 200 in 845ms
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 1951ms (595 modules)
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\@prisma\client\default.js
+- F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js
+    at @prisma/client (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:119:18)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.js:5:72)
+    at <unknown> (rsc)/./src/lib/prisma.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:54:1)
+    at eval (webpack-internal:///(rsc)/./src/app/api/users/route.js:6:69)
+    at <unknown> (rsc)/./src/app/api/users/route.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:43:1)
+    at __webpack_exec__ (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:173:39)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:83)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:47)
+    at Object.<anonymous> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:177:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/users'
+}
+ GET / 200 in 509ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 2.7s (921 modules)
+ GET / 200 in 2658ms
+ GET / 200 in 81ms
+ GET /api/users 500 in 6045ms
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm install
+
+up to date, audited 377 packages in 2s
+
+142 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.3s
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 1557ms (299 modules)
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\@prisma\client\default.js
+- F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js
+    at @prisma/client (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:119:18)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.js:5:72)
+    at <unknown> (rsc)/./src/lib/prisma.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:54:1)
+    at eval (webpack-internal:///(rsc)/./src/app/api/users/route.js:6:69)
+    at <unknown> (rsc)/./src/app/api/users/route.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:43:1)
+    at __webpack_exec__ (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:173:39)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:83)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:47)
+    at Object.<anonymous> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:177:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/users'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1756ms (640 modules)
+ GET /api/users 500 in 3950ms
+ ⨯ Error: Cannot find module '.prisma/client/default'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\@prisma\client\default.js
+- F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js
+    at @prisma/client (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:119:18)
+    at eval (webpack-internal:///(rsc)/./src/lib/prisma.js:5:72)
+    at <unknown> (rsc)/./src/lib/prisma.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:54:1)
+    at eval (webpack-internal:///(rsc)/./src/app/api/users/route.js:6:69)
+    at <unknown> (rsc)/./src/app/api/users/route.js (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:43:1)
+    at __webpack_exec__ (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:173:39)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:83)
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:174:47)
+    at Object.<anonymous> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\api\users\route.js:177:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/users'
+}
+ GET /api/users 500 in 318ms
+Terminate batch job (Y/N)?
+n
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 3s
+ ○ Compiling / ...
+ ✓ Compiled / in 2.5s (571 modules)
+ GET / 200 in 3208ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 666ms (352 modules)
+ GET /favicon.ico 200 in 960ms
+ ○ Compiling /api/users ...
+ ✓ Compiled /api/users in 974ms (595 modules)
+ GET / 200 in 546ms
+ GET /api/users 200 in 2441ms
+ ✓ Compiled /api/expenses in 498ms (583 modules)
+ GET /api/expenses 200 in 1581ms
+ ✓ Compiled /api/db-version in 457ms (588 modules)
+ GET /api/db-version 200 in 1456ms
+ GET /api/users 200 in 924ms
+ GET /api/expenses 200 in 230ms
+ GET / 200 in 408ms
+ GET /favicon.ico 200 in 60ms
+ GET /api/users 200 in 115ms
+ GET /api/expenses 200 in 213ms
+ GET /api/db-version 200 in 1103ms
+ ✓ Compiled in 1296ms (237 modules)
+ GET / 200 in 166ms
+   Reload env: .env.local
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 15.1s (572 modules)
+ ○ Compiling /middleware ...
+ GET / 200 in 11226ms
+ ✓ Compiled /middleware in 4.1s (221 modules)
+ ⨯ [Error: Publishable key not valid.]
+ ○ Compiling /_error ...
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (175kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ✓ Compiled /favicon.ico in 7.2s (1304 modules)
+ GET /favicon.ico 200 in 3837ms
+ ⨯ [Error: Publishable key not valid.]
+ GET / 404 in 2ms
+ ⨯ [Error: Publishable key not valid.]
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1066ms (1295 modules)
+ ⨯ [Error: Clerk: auth() was called but Clerk can't detect usage of clerkMiddleware(). Please ensure the following:
+- Your Middleware exists at ./src/middleware.(ts|js)
+- clerkMiddleware() is used in your Next.js Middleware.
+- Your Middleware matcher is configured to match this route or page.
+- If you are using the src directory, make sure the Middleware file is inside of it.
+
+For more details, see https://clerk.com/err/auth-middleware
+] {
+  digest: '2078639952'
+}
+ ⨯ [Error: Clerk: auth() was called but Clerk can't detect usage of clerkMiddleware(). Please ensure the following:
+- Your Middleware exists at ./src/middleware.(ts|js)
+- clerkMiddleware() is used in your Next.js Middleware.
+- Your Middleware matcher is configured to match this route or page.
+- If you are using the src directory, make sure the Middleware file is inside of it.
+
+For more details, see https://clerk.com/err/auth-middleware
+] {
+  digest: '942291391'
+}
+ GET / 404 in 7ms
+ ⨯ [Error: @clerk/clerk-react: The publishableKey passed to Clerk is invalid. You can get your Publishable key at https://dashboard.clerk.com/last-active?path=api-keys. (key=YOUR_PUBLISHABLE_KEY)] {
+  digest: '3104733296'
+}
+ ⨯ [Error: Clerk: auth() was called but Clerk can't detect usage of clerkMiddleware(). Please ensure the following:
+- Your Middleware exists at ./src/middleware.(ts|js)
+- clerkMiddleware() is used in your Next.js Middleware.
+- Your Middleware matcher is configured to match this route or page.
+- If you are using the src directory, make sure the Middleware file is inside of it.
+
+For more details, see https://clerk.com/err/auth-middleware
+] {
+  digest: '3216392029'
+}
+ ⨯ [Error: Clerk: auth() was called but Clerk can't detect usage of clerkMiddleware(). Please ensure the following:
+- Your Middleware exists at ./src/middleware.(ts|js)
+- clerkMiddleware() is used in your Next.js Middleware.
+- Your Middleware matcher is configured to match this route or page.
+- If you are using the src directory, make sure the Middleware file is inside of it.
+
+For more details, see https://clerk.com/err/auth-middleware
+] {
+  digest: '2601228754'
+}
+ ✓ Compiled in 1871ms (1418 modules)
+   Reload env: .env.local
+ ✓ Compiled in 594ms (1625 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (175kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 1452ms (221 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (175kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ○ Compiling / ...
+ ✓ Compiled / in 11.1s (1085 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 13072ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 3.4s (681 modules)
+ GET /favicon.ico 200 in 5382ms
+ POST / 200 in 5592ms
+ GET / 200 in 512ms
+ POST / 200 in 204ms
+ ⨯ ./node_modules/@clerk/nextjs/dist/esm/index.js
+Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\node_modules\@clerk\nextjs\dist\esm\index.js'
+
+Import trace for requested module:
+./node_modules/@clerk/nextjs/dist/esm/index.js
+./src/app/page.js
+ ⨯ ./node_modules/@clerk/nextjs/dist/esm/index.js
+Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\node_modules\@clerk\nextjs\dist\esm\index.js'
+
+Import trace for requested module:
+./node_modules/@clerk/nextjs/dist/esm/index.js
+./src/app/page.js
+ ⨯ ./node_modules/@clerk/nextjs/dist/esm/index.js
+Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\node_modules\@clerk\nextjs\dist\esm\index.js'
+
+Import trace for requested module:
+./node_modules/@clerk/nextjs/dist/esm/index.js
+./src/app/page.js
+ ✓ Compiled in 1028ms (571 modules)
+ GET / 200 in 381ms
+   Reload env: .env.local
+ ✓ Compiled in 4.3s (589 modules)
+ GET / 200 in 252ms
+ ✓ Compiled in 178ms (236 modules)
+ GET / 200 in 95ms
+ ✓ Compiled in 249ms (236 modules)
+ GET / 200 in 103ms
+ ✓ Compiled in 188ms (236 modules)
+ GET / 200 in 299ms
+ ✓ Compiled in 570ms (557 modules)
+ GET / 200 in 140ms
+ ✓ Compiled in 1185ms (571 modules)
+ GET / 200 in 875ms
+ GET / 200 in 41ms
+ ✓ Compiled in 186ms (236 modules)
+ ✓ Compiled in 640ms (557 modules)
+ GET / 200 in 569ms
+ GET / 200 in 36ms
+ GET / 200 in 44ms
+   Reload env: .env.local
+ ✓ Compiled in 173ms (557 modules)
+ GET / 200 in 120ms
+ ✓ Compiled in 179ms (236 modules)
+ GET / 200 in 280ms
+ ✓ Compiled in 641ms (557 modules)
+ GET / 200 in 510ms
+ GET / 200 in 36ms
+ ✓ Compiled in 207ms (236 modules)
+ ✓ Compiled in 199ms (236 modules)
+ GET / 200 in 209ms
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 1583ms (182 modules)
+ ○ Compiling /login ...
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (175kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ✓ Compiled /login in 1057ms (566 modules)
+ GET /login 200 in 1384ms
+ ✓ Compiled in 224ms (239 modules)
+ ✓ Compiled in 850ms (748 modules)
+ GET /login 200 in 733ms
+ GET /login 200 in 43ms
+ GET /login 200 in 37ms
+ ✓ Compiled in 370ms (580 modules)
+ GET /login 200 in 85ms
+Terminate batch job (Y/N)?
+
+^C
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling /api/auth/login ...
+ ✓ Compiled /api/auth/login in 1539ms (374 modules)
+ POST /api/auth/login 401 in 3393ms
+ POST /api/auth/login 401 in 123ms
+ POST /api/auth/login 401 in 227ms
+ ✓ Compiled /middleware in 399ms (182 modules)
+ ○ Compiling /login ...
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (175kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ✓ Compiled /login in 1283ms (655 modules)
+ GET /login 200 in 1722ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 571ms (433 modules)
+ GET /favicon.ico 200 in 663ms
+ POST /api/auth/login 401 in 968ms
+ POST /api/auth/login 401 in 122ms
+ ○ Compiling /register ...
+ ✓ Compiled /register in 670ms (664 modules)
+ GET /register 200 in 1007ms
+ ✓ Compiled /api/auth/register in 258ms (589 modules)
+ POST /api/auth/register 201 in 1615ms
+ GET /login 200 in 103ms
+ ✓ Compiled /api/auth/login in 213ms (438 modules)
+Error: Route "/api/auth/login" used `cookies().set('token', ...)`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at createCookiesAccessError (..\..\src\server\request\cookies.ts:529:10)
+    at syncIODev (..\..\src\server\request\cookies.ts:517:3)
+    at Promise.set (..\..\src\server\request\cookies.ts:379:9)
+    at POST (src\app\api\auth\login\route.js:38:15)
+  527 | ) {
+  528 |   const prefix = route ? `Route "${route}" ` : 'This route '
+> 529 |   return new Error(
+      |          ^
+  530 |     `${prefix}used ${expression}. ` +
+  531 |       `\`cookies()\` should be awaited before using its value. ` +
+  532 |       `Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis`
+ POST /api/auth/login 200 in 1447ms
+ ○ Compiling / ...
+ ✓ Compiled / in 688ms (671 modules)
+ GET / 200 in 828ms
+Error: Route "/api/auth/login" used `cookies().set('token', ...)`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at createCookiesAccessError (..\..\src\server\request\cookies.ts:529:10)
+    at syncIODev (..\..\src\server\request\cookies.ts:517:3)
+    at Promise.set (..\..\src\server\request\cookies.ts:379:9)
+    at POST (src\app\api\auth\login\route.js:38:15)
+  527 | ) {
+  528 |   const prefix = route ? `Route "${route}" ` : 'This route '
+> 529 |   return new Error(
+      |          ^
+  530 |     `${prefix}used ${expression}. ` +
+  531 |       `\`cookies()\` should be awaited before using its value. ` +
+  532 |       `Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis`
+ POST /api/auth/login 200 in 1235ms
+ GET / 200 in 31ms
+ ✓ Compiled /api/users in 434ms (673 modules)
+ GET /api/users 200 in 1510ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 555ms (675 modules)
+ GET /api/expenses 200 in 1660ms
+ ✓ Compiled /api/db-version in 391ms (680 modules)
+ GET /api/db-version 200 in 1363ms
+ ✓ Compiled /api/auth/logout in 331ms (682 modules)
+Error: Route "/api/auth/logout" used `cookies().set('token', ...)`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at createCookiesAccessError (..\..\src\server\request\cookies.ts:529:10)
+    at syncIODev (..\..\src\server\request\cookies.ts:517:3)
+    at Promise.set (..\..\src\server\request\cookies.ts:379:9)
+    at POST (src\app\api\auth\logout\route.js:6:15)
+  527 | ) {
+  528 |   const prefix = route ? `Route "${route}" ` : 'This route '
+> 529 |   return new Error(
+      |          ^
+  530 |     `${prefix}used ${expression}. ` +
+  531 |       `\`cookies()\` should be awaited before using its value. ` +
+  532 |       `Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis`
+ POST /api/auth/logout 200 in 468ms
+ GET /login 200 in 112ms
+Error: Route "/api/auth/login" used `cookies().set('token', ...)`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at createCookiesAccessError (..\..\src\server\request\cookies.ts:529:10)
+    at syncIODev (..\..\src\server\request\cookies.ts:517:3)
+    at Promise.set (..\..\src\server\request\cookies.ts:379:9)
+    at POST (src\app\api\auth\login\route.js:38:15)
+  527 | ) {
+  528 |   const prefix = route ? `Route "${route}" ` : 'This route '
+> 529 |   return new Error(
+      |          ^
+  530 |     `${prefix}used ${expression}. ` +
+  531 |       `\`cookies()\` should be awaited before using its value. ` +
+  532 |       `Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis`
+ POST /api/auth/login 200 in 3174ms
+Error: Route "/api/auth/login" used `cookies().set('token', ...)`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at createCookiesAccessError (..\..\src\server\request\cookies.ts:529:10)
+    at syncIODev (..\..\src\server\request\cookies.ts:517:3)
+    at Promise.set (..\..\src\server\request\cookies.ts:379:9)
+    at POST (src\app\api\auth\login\route.js:38:15)
+  527 | ) {
+  528 |   const prefix = route ? `Route "${route}" ` : 'This route '
+> 529 |   return new Error(
+      |          ^
+  530 |     `${prefix}used ${expression}. ` +
+  531 |       `\`cookies()\` should be awaited before using its value. ` +
+  532 |       `Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis`
+ POST /api/auth/login 200 in 2457ms
+Error: Route "/api/auth/login" used `cookies().set('token', ...)`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at createCookiesAccessError (..\..\src\server\request\cookies.ts:529:10)
+    at syncIODev (..\..\src\server\request\cookies.ts:517:3)
+    at Promise.set (..\..\src\server\request\cookies.ts:379:9)
+    at POST (src\app\api\auth\login\route.js:38:15)
+  527 | ) {
+  528 |   const prefix = route ? `Route "${route}" ` : 'This route '
+> 529 |   return new Error(
+      |          ^
+  530 |     `${prefix}used ${expression}. ` +
+  531 |       `\`cookies()\` should be awaited before using its value. ` +
+  532 |       `Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis`
+ POST /api/auth/login 200 in 1609ms
+ GET / 200 in 1325ms
+ GET / 200 in 136ms
+ GET / 200 in 63ms
+ GET /api/users 200 in 293ms
+ GET /api/expenses 200 in 283ms
+ GET / 200 in 457ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1202ms (363 modules)
+ GET /favicon.ico 200 in 1715ms
+ ✓ Compiled in 5.6s (242 modules)
+ ✓ Compiled in 349ms (242 modules)
+ GET / 200 in 333ms
+ GET / 200 in 39ms
+ ✓ Compiled in 462ms (242 modules)
+ GET / 200 in 56ms
+ ✓ Compiled in 269ms (242 modules)
+ ✓ Compiled in 272ms (242 modules)
+ GET / 200 in 229ms
+ GET / 200 in 60ms
+ GET / 200 in 407ms
+ GET /favicon.ico 200 in 64ms
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 17.6s
+ ✓ Compiled /middleware in 3.5s
+ ✓ Compiled (182 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 3.7s (573 modules)
+ GET / 200 in 5497ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 723ms (353 modules)
+ ✓ Compiled in 1818ms (238 modules)
+ GET /favicon.ico 200 in 5599ms
+ GET / 200 in 640ms
+ GET /api/expenses 200 in 6509ms
+ ✓ Compiled in 1641ms (574 modules)
+ GET / 200 in 458ms
+ ✓ Compiled /api/expenses in 230ms (425 modules)
+ POST /api/expenses 201 in 1565ms
+ GET /api/expenses 200 in 281ms
+ GET / 200 in 451ms
+ ✓ Compiled /favicon.ico in 454ms (427 modules)
+ GET /favicon.ico 200 in 777ms
+ GET /api/expenses 200 in 1902ms
+ GET / 200 in 309ms
+ GET /favicon.ico 200 in 49ms
+ GET /api/expenses 200 in 199ms
+ GET / 200 in 112ms
+ GET /favicon.ico 200 in 63ms
+ GET /api/expenses 200 in 250ms
+ POST /api/expenses 201 in 430ms
+ GET /api/expenses 200 in 158ms
+ ○ Compiling /api/expenses/[id] ...
+ ✓ Compiled /api/expenses/[id] in 1537ms (653 modules)
+Error: Route "/api/expenses/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at PUT (src\app\api\expenses\[id]\route.js:26:13)
+  24 |     }
+  25 |
+> 26 |     const { id } = params;
+     |             ^
+  27 |     const { title, description, amount, tag, date } = await req.json();
+  28 |
+  29 |     const expense = await prisma.expense.findUnique({
+ PUT /api/expenses/1 200 in 4519ms
+ GET /api/expenses 200 in 380ms
+ GET / 200 in 237ms
+ GET /favicon.ico 200 in 69ms
+ GET /api/expenses 200 in 201ms
+Terminate batch job (Y/N)?
+n
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.7s
+ ○ Compiling /api/expenses/[id] ...
+ ✓ Compiled /api/expenses/[id] in 1512ms (367 modules)
+Error: Route "/api/expenses/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at DELETE (src\app\api\expenses\[id]\route.js:61:13)
+  59 |     }
+  60 |
+> 61 |     const { id } = params;
+     |             ^
+  62 |
+  63 |     const expense = await prisma.expense.findUnique({
+  64 |       where: { id: parseInt(id) },
+ DELETE /api/expenses/2 200 in 4969ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 640ms (369 modules)
+ GET /api/expenses 200 in 2036ms
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 818ms (182 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 1974ms (651 modules)
+ GET / 200 in 4850ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 524ms (429 modules)
+ GET /favicon.ico 200 in 830ms
+ GET /api/expenses 200 in 1748ms
+ ✓ Compiled in 3.3s (667 modules)
+ GET / 200 in 775ms
+ GET / 200 in 529ms
+ GET /favicon.ico 200 in 307ms
+ GET /api/expenses 200 in 1149ms
+ PUT /api/expenses/1 200 in 473ms
+ GET /api/expenses 200 in 171ms
+ DELETE /api/expenses/1 200 in 334ms
+ GET /api/expenses 200 in 144ms
+ POST /api/expenses 201 in 337ms
+ GET /api/expenses 200 in 130ms
+ PUT /api/expenses/3 200 in 237ms
+ GET /api/expenses 200 in 144ms
+ ✓ Compiled in 376ms (238 modules)
+ GET / 200 in 67ms
+Terminate batch job (Y/N)?
+
+Terminate batch job (Y/N)? y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 5.4s
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 1081ms (182 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 3.5s (573 modules)
+ GET / 200 in 4277ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 927ms (353 modules)
+ ✓ Compiled in 1250ms (238 modules)
+ GET /favicon.ico 200 in 4173ms
+ GET / 200 in 268ms
+ GET /api/expenses 200 in 5126ms
+ POST /api/expenses 201 in 226ms
+ GET /api/expenses 200 in 126ms
+ ✓ Compiled in 2.5s (663 modules)
+ GET / 200 in 421ms
+ GET / 200 in 283ms
+ ✓ Compiled /api/expenses in 333ms (353 modules)
+ ✓ Compiled (427 modules)
+ GET /favicon.ico 200 in 576ms
+ GET /api/expenses 200 in 1316ms
+ ○ Compiling /api/expenses/[id] ...
+ ✓ Compiled /api/expenses/[id] in 1060ms (653 modules)
+ PUT /api/expenses/4 200 in 3895ms
+ GET /api/expenses 200 in 260ms
+ PUT /api/expenses/4 200 in 262ms
+ GET /api/expenses 200 in 154ms
+Terminate batch job (Y/N)?
+
+^C
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling /api/seed ...
+ ✓ Compiled /api/seed in 1701ms (299 modules)
+ GET /api/seed 200 in 3579ms
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 748ms (182 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 1746ms (581 modules)
+ GET / 200 in 3480ms
+ ✓ Compiled /api/expenses in 463ms (359 modules)
+ ✓ Compiled in 2.1s (238 modules)
+ GET /favicon.ico 200 in 3199ms
+ GET / 200 in 353ms
+ GET /api/expenses 200 in 4043ms
+ ✓ Compiled in 2.1s (847 modules)
+ GET / 200 in 2078ms
+ GET / 200 in 92ms
+ ✓ Compiled in 1677ms (574 modules)
+ GET / 200 in 504ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 2.5s (663 modules)
+ GET / 200 in 253ms
+ GET /api/expenses?page=1&pageSize=10 200 in 3017ms
+ GET / 200 in 517ms
+ ✓ Compiled /api/expenses in 473ms (353 modules)
+ ✓ Compiled (427 modules)
+ GET /favicon.ico 200 in 925ms
+ GET /api/expenses?page=1&pageSize=10 200 in 2156ms
+ GET /api/expenses?page=2&pageSize=10 200 in 433ms
+ GET /api/expenses?page=3&pageSize=10 200 in 531ms
+ GET /api/expenses?page=2&pageSize=10 200 in 427ms
+ ✓ Compiled in 363ms (238 modules)
+ GET / 200 in 132ms
+ ✓ Compiled in 328ms (238 modules)
+ ✓ Compiled in 183ms (238 modules)
+ GET / 200 in 204ms
+ GET / 200 in 48ms
+ ✓ Compiled in 2.3s (576 modules)
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 542ms (426 modules)
+ GET / 200 in 1376ms
+ GET /api/expenses?page=1&pageSize=10 200 in 2797ms
+ GET / 200 in 421ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 639ms (354 modules)
+ ✓ Compiled (428 modules)
+ GET /favicon.ico 200 in 954ms
+ GET /api/expenses?page=1&pageSize=10 200 in 2216ms
+ GET / 200 in 344ms
+ GET /favicon.ico 200 in 74ms
+ GET /api/expenses?page=1&pageSize=10 200 in 568ms
+ GET / 200 in 146ms
+ GET /favicon.ico 200 in 65ms
+ GET /api/expenses?page=1&pageSize=10 200 in 616ms
+ ✓ Compiled in 1340ms (667 modules)
+ GET / 200 in 191ms
+ POST /api/expenses 201 in 1039ms
+ GET /api/expenses?page=1&pageSize=10 200 in 680ms
+ GET / 200 in 284ms
+ GET /favicon.ico 200 in 66ms
+ GET /api/expenses?page=1&pageSize=10 200 in 485ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 3.7s (576 modules)
+ ✓ Compiled in 1ms (426 modules)
+ GET / 200 in 1991ms
+ GET /api/expenses?page=1&pageSize=10 200 in 4601ms
+ ✓ Compiled in 2.3s (576 modules)
+ GET / 200 in 638ms
+ ✓ Compiled in 833ms (239 modules)
+ GET / 200 in 293ms
+ ✓ Compiled in 6s (588 modules)
+ GET / 200 in 444ms
+ GET / 200 in 459ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 646ms (360 modules)
+ ✓ Compiled (434 modules)
+ GET /favicon.ico 200 in 1019ms
+ GET /api/expenses?page=1&pageSize=10 200 in 2066ms
+ GET /api/expenses?page=2&pageSize=10 200 in 424ms
+ GET /api/expenses?page=1&pageSize=10 200 in 426ms
+ ✓ Compiled in 2.2s (588 modules)
+ GET / 200 in 669ms
+ ✓ Compiled /api/expenses in 130ms (432 modules)
+ GET /api/expenses?page=2&pageSize=10 200 in 1612ms
+ GET /api/expenses?page=3&pageSize=10 200 in 431ms
+ GET /api/expenses?page=4&pageSize=10 200 in 414ms
+ GET /api/expenses?page=5&pageSize=10 200 in 417ms
+ GET /api/expenses?page=6&pageSize=10 200 in 433ms
+ GET /api/expenses?page=5&pageSize=10 200 in 411ms
+ GET /api/expenses?page=4&pageSize=10 200 in 409ms
+ GET /api/expenses?page=3&pageSize=10 200 in 413ms
+ GET /api/expenses?page=2&pageSize=10 200 in 416ms
+ GET /api/expenses?page=1&pageSize=10 200 in 1326ms
+ ✓ Compiled in 1865ms (677 modules)
+ GET / 200 in 266ms
+ ✓ Compiled in 570ms (245 modules)
+ GET / 200 in 48ms
+ ✓ Compiled in 495ms (245 modules)
+ ✓ Compiled in 450ms (245 modules)
+ GET / 200 in 383ms
+ GET / 200 in 107ms
+ ✓ Compiled in 2.9s (590 modules)
+ GET / 200 in 888ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 844ms (433 modules)
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 3050ms
+ GET /api/expenses?page=1&pageSize=10&search=sal 200 in 709ms
+ GET /api/expenses?page=1&pageSize=10&search=salary 200 in 423ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 437ms
+ GET /api/expenses?page=1&pageSize=10&search=salary 200 in 518ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 415ms
+ GET /api/expenses?page=1&pageSize=10&search=inne 200 in 523ms
+ GET /api/expenses?page=1&pageSize=10&search=inn 200 in 417ms
+ GET /api/expenses?page=1&pageSize=10&search=in 200 in 417ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 409ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 2.5s (679 modules)
+ GET / 200 in 1165ms
+ GET / 200 in 39ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 2573ms
+ GET /?query=s 200 in 75ms
+ GET /?query=s 200 in 90ms
+ GET /api/expenses?page=1&pageSize=10&search=s 200 in 666ms
+ GET /?query=sala 200 in 78ms
+ GET /?query=sala 200 in 55ms
+ GET /api/expenses?page=1&pageSize=10&search=sala 200 in 458ms
+ GET /?query=salar 200 in 52ms
+ GET /?query=salar 200 in 95ms
+ GET /api/expenses?page=1&pageSize=10&search=salar 200 in 575ms
+ GET /?query=coll 200 in 67ms
+ GET /?query=coll 200 in 60ms
+ GET /api/expenses?page=1&pageSize=10&search=coll 200 in 462ms
+ GET / 200 in 50ms
+ GET / 200 in 62ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 451ms
+ ✓ Compiled in 1501ms (679 modules)
+ GET / 200 in 995ms
+ GET / 200 in 88ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 2342ms
+ GET / 200 in 478ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 822ms (435 modules)
+ GET /favicon.ico 200 in 1129ms
+ GET / 200 in 905ms
+ GET /favicon.ico 200 in 51ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 2484ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 442ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 439ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 488ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 438ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 433ms
+ GET /api/expenses?page=3&pageSize=10&search= 200 in 431ms
+ GET /api/expenses?page=4&pageSize=10&search= 200 in 431ms
+ GET /api/expenses?page=5&pageSize=10&search= 200 in 435ms
+ GET /api/expenses?page=4&pageSize=10&search= 200 in 426ms
+ GET /api/expenses?page=3&pageSize=10&search= 200 in 433ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 424ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 1338ms
+ ✓ Compiled in 891ms (590 modules)
+ GET / 200 in 242ms
+ ✓ Compiled in 506ms (246 modules)
+ GET / 200 in 86ms
+ ✓ Compiled in 5.6s (740 modules)
+ GET / 200 in 339ms
+ ✓ Compiled /api/expenses in 386ms (522 modules)
+ GET / 200 in 1061ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 2392ms
+ GET /?tags=FOOD%2CBILLS 200 in 93ms
+ GET /?tags=FOOD%2CBILLS 200 in 100ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=FOOD,BILLS 200 in 880ms
+ GET /?tags=BILLS 200 in 68ms
+ GET /?tags=BILLS 200 in 63ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS 200 in 697ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05 200 in 60ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05 200 in 135ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05 200 in 852ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000 200 in 65ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000 200 in 105ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000 200 in 709ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 58ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 62ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 983ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 420ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1045ms (524 modules)
+ GET /favicon.ico 200 in 1621ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 1100ms
+ GET /favicon.ico 200 in 67ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 2615ms
+Terminate batch job (Y/N)?
+
+Terminate batch job (Y/N)? y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.6s
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 598ms (182 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 5.5s (725 modules)
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 7331ms
+ ✓ Compiled in 1892ms (292 modules)
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /api/expenses in 2.6s (450 modules)
+ ✓ Compiled in 920ms (293 modules)
+ GET /favicon.ico 200 in 4993ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 3655ms
+ GET /favicon.ico 200 in 38ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 6092ms
+ ✓ Compiled in 3.2s (740 modules)
+ ✓ Compiled /api/expenses in 296ms (522 modules)
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 1402ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 1310ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 2774ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 413ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 827ms (524 modules)
+ GET /favicon.ico 200 in 1400ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 1131ms
+ GET /favicon.ico 200 in 63ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 2398ms
+ ✓ Compiled in 2.2s (740 modules)
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 951ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 554ms (522 modules)
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 1787ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 3714ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 416ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 681ms (524 modules)
+ GET /favicon.ico 200 in 1052ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 989ms
+ GET /favicon.ico 200 in 39ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 2362ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 356ms
+ GET /favicon.ico 200 in 34ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 80ms
+ GET /favicon.ico 200 in 61ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 514ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 2.2s (740 modules)
+ ✓ Compiled (829 modules)
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 1341ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 82ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 3027ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 364ms
+ ✓ Compiled /favicon.ico in 463ms (524 modules)
+ GET /favicon.ico 200 in 848ms
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 875ms
+ GET /favicon.ico 200 in 51ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 2135ms
+ ✓ Compiled in 1575ms (740 modules)
+ ○ Compiling /api/expenses ...
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 886ms
+ ✓ Compiled /api/expenses in 1530ms (829 modules)
+ GET /?tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 1708ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=BILLS&startDate=2025-09-10&endDate=2025-10-05&minAmount=0&maxAmount=1000&isCredit=true 200 in 3245ms
+ GET / 200 in 68ms
+ GET / 200 in 63ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 762ms
+ GET / 200 in 474ms
+ ✓ Compiled /favicon.ico in 418ms (524 modules)
+ GET /favicon.ico 200 in 877ms
+ GET / 200 in 1082ms
+ GET /favicon.ico 200 in 69ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 2226ms
+ GET /?tags=FOOD 200 in 64ms
+ GET /?tags=FOOD 200 in 51ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=FOOD 200 in 727ms
+ ✓ Compiled in 4.4s (740 modules)
+ GET /?tags=FOOD 200 in 1144ms
+ ✓ Compiled /api/expenses in 503ms (522 modules)
+ GET /?tags=FOOD 200 in 1669ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=FOOD 200 in 2994ms
+ GET /?tags=TRAVEL 200 in 94ms
+ GET /?tags=TRAVEL 200 in 169ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL 200 in 838ms
+ GET /?tags=TRAVEL&isCredit=true 200 in 106ms
+ GET /?tags=TRAVEL&isCredit=true 200 in 163ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&isCredit=true 200 in 734ms
+ GET /?tags=TRAVEL&isCredit=false 200 in 115ms
+ GET /?tags=TRAVEL&isCredit=false 200 in 140ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&isCredit=false 200 in 520ms
+ GET / 200 in 107ms
+ GET / 200 in 114ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 777ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 93ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 128ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 920ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 1103ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 71ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 629ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 3.1s (820 modules)
+ GET /api/seed 404 in 3755ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 860ms (525 modules)
+ GET /favicon.ico 200 in 1071ms
+ ✓ Compiled in 1799ms (740 modules)
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 620ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 556ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 902ms (450 modules)
+ ✓ Compiled (524 modules)
+ GET /favicon.ico 200 in 4299ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 4298ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 247ms
+ GET /favicon.ico 200 in 110ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 5723ms
+ ✓ Compiled in 3.3s (740 modules)
+ ✓ Compiled /api/expenses in 471ms (522 modules)
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 1903ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 1816ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=desc 200 in 1827ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=desc 200 in 185ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=desc 200 in 137ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true 200 in 3206ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=desc 200 in 1838ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=asc 200 in 511ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=asc 200 in 357ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=desc 200 in 397ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=asc 200 in 135ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=asc 200 in 868ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=asc 200 in 127ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 877ms (524 modules)
+ GET /favicon.ico 200 in 1624ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=asc 200 in 1213ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=desc 200 in 1217ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=asc 200 in 93ms
+ GET /favicon.ico 200 in 56ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=asc 200 in 2844ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=amount&sortOrder=asc 200 in 93ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=amount&sortOrder=asc 200 in 162ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=amount&sortOrder=asc 200 in 115ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=amount&sortOrder=asc 200 in 575ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=amount&sortOrder=asc 200 in 403ms
+ GET /favicon.ico 200 in 128ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=amount&sortOrder=asc 200 in 241ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=date&sortOrder=desc 200 in 242ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=amount&sortOrder=asc 200 in 634ms
+ GET /?tags=TRAVEL&minAmount=10&maxAmount=1000&isCredit=true&sortBy=amount&sortOrder=asc 200 in 174ms
+ GET /favicon.ico 200 in 54ms
+ GET / 200 in 217ms
+ GET / 200 in 132ms
+ GET /?sortBy=date&sortOrder=desc 200 in 139ms
+ GET /?sortBy=date&sortOrder=desc 200 in 120ms
+ GET /?sortBy=date&sortOrder=desc 200 in 34ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 781ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1421ms
+ GET /?sortBy=date&sortOrder=asc 200 in 78ms
+ GET /?sortBy=date&sortOrder=asc 200 in 197ms
+ GET /?sortBy=date&sortOrder=asc 200 in 146ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=asc 200 in 716ms
+ GET /?sortBy=date&sortOrder=desc 200 in 68ms
+ GET /?sortBy=date&sortOrder=desc 200 in 94ms
+ GET /?sortBy=date&sortOrder=desc 200 in 98ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 511ms
+ ✓ Compiled in 2.7s (740 modules)
+ ○ Compiling /api/expenses ...
+ GET /?sortBy=date&sortOrder=desc 200 in 768ms
+ ✓ Compiled /api/expenses in 1640ms (829 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 2200ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 3762ms
+ GET /?sortBy=date&sortOrder=asc 200 in 103ms
+ GET /?sortBy=date&sortOrder=asc 200 in 202ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=asc 200 in 629ms
+ GET /?sortBy=amount&sortOrder=desc 200 in 123ms
+ GET /?sortBy=amount&sortOrder=desc 200 in 190ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=amount&sortOrder=desc 200 in 633ms
+ GET /?sortBy=amount&sortOrder=asc 200 in 78ms
+ GET /?sortBy=amount&sortOrder=asc 200 in 205ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=amount&sortOrder=asc 200 in 730ms
+ GET /?sortBy=date&sortOrder=desc 200 in 80ms
+ GET /?sortBy=date&sortOrder=desc 200 in 90ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 596ms
+ GET /?sortBy=amount&sortOrder=desc 200 in 97ms
+ GET /?sortBy=amount&sortOrder=desc 200 in 264ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=amount&sortOrder=desc 200 in 777ms
+ GET /?sortBy=amount&sortOrder=desc 200 in 1018ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 838ms (524 modules)
+ GET /favicon.ico 200 in 1694ms
+ GET /?sortBy=amount&sortOrder=desc 200 in 2028ms
+ GET /favicon.ico 200 in 44ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=amount&sortOrder=desc 200 in 3342ms
+ ✓ Compiled in 3s (740 modules)
+ GET /?sortBy=amount&sortOrder=desc 200 in 564ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 760ms (522 modules)
+ GET /?sortBy=amount&sortOrder=desc 200 in 1898ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=amount&sortOrder=desc 200 in 3088ms
+ GET /?sortBy=date&sortOrder=desc 200 in 107ms
+ GET /?sortBy=date&sortOrder=desc 200 in 297ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 829ms
+ GET /api/expenses?page=2&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 428ms
+ GET /api/expenses?page=3&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 421ms
+ GET /api/expenses?page=4&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 423ms
+ GET /api/expenses?page=5&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 445ms
+ GET /api/expenses?page=6&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 423ms
+ GET /?sortBy=date&sortOrder=asc 200 in 129ms
+ GET /?sortBy=date&sortOrder=asc 200 in 130ms
+ GET /api/expenses?page=6&pageSize=10&search=&sortBy=date&sortOrder=asc 200 in 730ms
+ GET /?sortBy=date&sortOrder=desc 200 in 86ms
+ GET /?sortBy=date&sortOrder=desc 200 in 101ms
+ GET /api/expenses?page=6&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 490ms
+ GET /api/expenses?page=5&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 535ms
+ GET /api/expenses?page=4&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1351ms
+ GET /api/expenses?page=3&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1291ms
+ GET /api/expenses?page=2&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1312ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1389ms
+ ✓ Compiled in 2.5s (829 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 622ms
+ GET /?sortBy=date&sortOrder=desc 200 in 166ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1881ms
+ ✓ Compiled in 1622ms (740 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 566ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 6.2s (829 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 5429ms
+ GET /?sortBy=date&sortOrder=desc 200 in 151ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 7111ms
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 127ms
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 91ms
+ GET /api/expenses?page=1&pageSize=10&search=&startDate=2025-10-05&endDate=2025-10-05&sortBy=date&sortOrder=desc 200 in 1044ms
+ ✓ Compiled in 1061ms (740 modules)
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 366ms
+ ✓ Compiled /api/expenses in 357ms (522 modules)
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 858ms
+ GET /api/expenses?page=1&pageSize=10&search=&startDate=2025-10-05&endDate=2025-10-05&sortBy=date&sortOrder=desc 200 in 2285ms
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 641ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 2.5s (524 modules)
+ GET /favicon.ico 200 in 3197ms
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 1990ms
+ GET /favicon.ico 200 in 82ms
+ GET /api/expenses?page=1&pageSize=10&search=&startDate=2025-10-05&endDate=2025-10-05&sortBy=date&sortOrder=desc 200 in 4452ms
+ ○ Compiling /api/expenses/[id] ...
+ ✓ Compiled /api/expenses/[id] in 3.6s (833 modules)
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 1129ms
+ PUT /api/expenses/55 200 in 5631ms
+ PUT /api/expenses/55 200 in 272ms
+ PUT /api/expenses/55 200 in 3976ms
+ PUT /api/expenses/55 200 in 4181ms
+ PUT /api/expenses/55 200 in 4810ms
+ PUT /api/expenses/55 200 in 10442ms
+ PUT /api/expenses/55 200 in 4161ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 874ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 543ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 561ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 541ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 530ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 567ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 547ms
+ PUT /api/expenses/39 200 in 249ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 541ms
+ PUT /api/expenses/39 200 in 339ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 577ms
+ GET /?sortBy=date&sortOrder=desc 200 in 114ms
+ GET /?sortBy=date&sortOrder=desc 200 in 202ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 831ms
+ ✓ Compiled in 1445ms (740 modules)
+ ✓ Compiled in 723ms (307 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 667ms
+ ✓ Compiled /api/expenses in 239ms (522 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 680ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 2718ms
+ GET /?sortBy=date&sortOrder=desc 200 in 4446ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1573ms (524 modules)
+ GET /favicon.ico 200 in 2445ms
+ GET /?sortBy=date&sortOrder=desc 200 in 2101ms
+ GET /favicon.ico 200 in 83ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 3786ms
+ GET /?sortBy=date&sortOrder=desc 200 in 441ms
+ GET /favicon.ico 200 in 89ms
+ GET /?sortBy=date&sortOrder=desc 200 in 102ms
+ GET /favicon.ico 200 in 65ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 788ms
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 3.7s
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 1244ms (182 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 5.2s (739 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 7693ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /api/expenses in 1634ms (450 modules)
+ ✓ Compiled in 967ms (307 modules)
+ GET /favicon.ico 200 in 4879ms
+ GET /?sortBy=date&sortOrder=desc 200 in 4351ms
+ GET /?sortBy=date&sortOrder=desc 200 in 38ms
+ GET /favicon.ico 200 in 52ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 6850ms
+ ✓ Compiled in 1397ms (740 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 339ms
+ ✓ Compiled in 729ms (307 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 91ms
+ ✓ Compiled in 4.5s (740 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 1007ms
+ ✓ Compiled in 1900ms (740 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 336ms
+ ✓ Compiled in 1954ms (740 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 188ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 1565ms (522 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 2555ms
+ GET /?sortBy=date&sortOrder=desc 200 in 38ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 4621ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 578ms
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:680:1]
+ 677 │           )}
+ 678 │         </div>
+ 679 │       </div>
+ 680 │     </main>
+     ·      ──────
+ 681 │   );
+ 682 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ ○ Compiling /_error ...
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </main>
+     ·      ──────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ GET /?sortBy=date&sortOrder=desc 500 in 37799ms
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </main>
+     ·      ──────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ GET /?sortBy=date&sortOrder=desc 500 in 1118ms
+ GET /?sortBy=date&sortOrder=desc 500 in 248ms
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </main>
+     ·      ──────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ GET /?sortBy=date&sortOrder=desc 500 in 1309ms
+ GET /?sortBy=date&sortOrder=desc 500 in 378ms
+ GET /?sortBy=date&sortOrder=desc 500 in 1099ms
+ GET /?sortBy=date&sortOrder=desc 500 in 474ms
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </main>
+     ·      ──────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </main>
+     ·      ──────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ GET /?sortBy=date&sortOrder=desc 500 in 56ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </main>
+     ·      ──────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </div>
+     ·      ─────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ GET /?sortBy=date&sortOrder=desc 200 in 1746ms
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </div>
+     ·      ─────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </div>
+     ·      ─────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /?sortBy=date&sortOrder=desc 500 in 186ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /?sortBy=date&sortOrder=desc 200 in 832ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </div>
+     ·      ─────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ GET /?sortBy=date&sortOrder=desc 500 in 221ms
+ ✓ Compiled /_not-found in 200ms (388 modules)
+ GET /?sortBy=date&sortOrder=desc 500 in 53ms
+ ✓ Compiled in 208ms (388 modules)
+ GET /?sortBy=date&sortOrder=desc 500 in 37ms
+ ✓ Compiled in 269ms (388 modules)
+ ✓ Compiled in 474ms (388 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 298ms
+ GET /?sortBy=date&sortOrder=desc 500 in 76ms
+ GET /?sortBy=date&sortOrder=desc 500 in 44ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /?sortBy=date&sortOrder=desc 200 in 402ms
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </div>
+     ·      ─────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </div>
+     ·      ─────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ GET /?sortBy=date&sortOrder=desc 500 in 199ms
+ GET /?sortBy=date&sortOrder=desc 500 in 42ms
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.9s
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 745ms (182 modules)
+ ○ Compiling / ...
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </div>
+     ·      ─────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </div>
+     ·      ─────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </div>
+     ·      ─────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/page.js
+Error:   × Unterminated regexp literal
+     ╭─[F:\SHIPSY PROJECT\expense-tracker-app\src\app\page.js:683:1]
+ 680 │           )}
+ 681 │         </div>
+ 682 │       </div>
+ 683 │     </div>
+     ·      ─────
+ 684 │   );
+ 685 │ }
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.js
+ GET /?sortBy=date&sortOrder=desc 500 in 713ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled /_error in 37.1s (1084 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 8647ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 4s (1156 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 4339ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 6820ms
+ ✓ Compiled in 1265ms (1169 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 305ms
+ ✓ Compiled in 1286ms (1169 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 172ms
+ ✓ Compiled in 2s (1169 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 230ms
+ GET /?sortBy=date&sortOrder=desc 200 in 100ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1651ms
+ GET /?sortBy=date&sortOrder=desc 200 in 403ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /api/expenses in 1889ms (638 modules)
+ ✓ Compiled (712 modules)
+ GET /favicon.ico 200 in 2745ms
+ GET /?sortBy=date&sortOrder=desc 200 in 1749ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 3873ms
+ ✓ Compiled in 1506ms (1171 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 497ms
+ GET /?sortBy=date&sortOrder=desc 200 in 43ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1658ms
+ GET /?sortBy=date&sortOrder=desc 200 in 332ms
+ GET /favicon.ico 200 in 71ms
+ GET /?sortBy=date&sortOrder=desc 200 in 117ms
+ GET /favicon.ico 200 in 58ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 759ms
+ ✓ Compiled in 1392ms (1171 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 1027ms
+ GET /?sortBy=date&sortOrder=desc 200 in 263ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1960ms
+ GET /?sortBy=date&sortOrder=desc 200 in 324ms
+ GET /favicon.ico 200 in 75ms
+ GET /?sortBy=date&sortOrder=desc 200 in 340ms
+ GET /favicon.ico 200 in 40ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 875ms
+ ✓ Compiled in 2.6s (1080 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 644ms
+ ✓ Compiled /api/expenses in 461ms (710 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 1570ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 3019ms
+ GET /?sortBy=date&sortOrder=desc 200 in 751ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 713ms (712 modules)
+ GET /favicon.ico 200 in 1201ms
+ GET /?sortBy=date&sortOrder=desc 200 in 1093ms
+ GET /favicon.ico 200 in 66ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 2572ms
+ ✓ Compiled in 6.2s (1080 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 791ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 632ms (710 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 2114ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 3833ms
+ ✓ Compiled in 1513ms (1169 modules)
+ ✓ Compiled in 1ms (710 modules)
+ ✓ Compiled in 1ms (710 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 1944ms
+ ✓ Compiled in 0ms (710 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 989ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 4062ms
+ ✓ Compiled in 1454ms (1169 modules)
+ ✓ Compiled in 2ms (710 modules)
+ ✓ Compiled in 0ms (710 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 1610ms
+ ✓ Compiled in 2ms (710 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 1340ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 4589ms
+ GET /api/expenses?page=2&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1543ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 524ms
+ ✓ Compiled in 7.8s (1080 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 747ms
+ ✓ Compiled in 2.5s (459 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\client-development-fallback\1.pack.gz_' -> 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\client-development-fallback\1.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\client-development-fallback\1.pack.gz_' -> 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\client-development-fallback\1.pack.gz'
+ ✓ Compiled in 1161ms (459 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 823ms
+ GET /?sortBy=date&sortOrder=desc 200 in 351ms
+ ✓ Compiled in 10.4s (1090 modules)
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 2s (715 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 6955ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 7843ms
+ GET /?sortBy=date&sortOrder=desc 200 in 1101ms
+ GET /?sortBy=date&sortOrder=desc 200 in 196ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1459ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.6s (1170 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\fallback-build-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\fallback-build-manifest.json'
+}
+ ⨯ [Error: Cannot find module 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\pages\_document.js'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\fallback-build-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\fallback-build-manifest.json'
+}
+ ⨯ [Error: Cannot find module 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\pages\_document.js'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\fallback-build-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\fallback-build-manifest.json'
+}
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 500 in 4835ms
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 500 in 339ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\server\\app\\page.js',
+  page: '/'
+}
+ ⨯ [Error: Cannot find module 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\pages\_document.js'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\server\\app\\page.js',
+  page: '/'
+}
+ ⨯ [Error: Cannot find module 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\pages\_document.js'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\fallback-build-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\fallback-build-manifest.json'
+}
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 500 in 729ms
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 500 in 335ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\server\\app\\page.js',
+  page: '/'
+}
+ ⨯ [Error: Cannot find module 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\pages\_document.js'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\server\\app\\page.js',
+  page: '/'
+}
+ ⨯ [Error: Cannot find module 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\pages\_document.js'
+Require stack:
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\require.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\load-components.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\utils.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\options.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\swc\index.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\parse-module.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\analysis\get-page-static-info.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\router-server.js
+- F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\server\lib\start-server.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\fallback-build-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\fallback-build-manifest.json'
+}
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 500 in 881ms
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 500 in 352ms
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 3.5s
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 1346ms (182 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 6.6s (749 modules)
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 9004ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 2.7s (455 modules)
+ ✓ Compiled in 1345ms (312 modules)
+ GET /favicon.ico 200 in 5619ms
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 5535ms
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 153ms
+ GET /favicon.ico 200 in 91ms
+ GET /api/expenses?page=1&pageSize=10&search=&startDate=2025-10-05&endDate=2025-10-05&sortBy=date&sortOrder=desc 200 in 7090ms
+ ✓ Compiled in 1953ms (841 modules)
+ ✓ Compiled in 3ms (529 modules)
+ ✓ Compiled in 0ms (529 modules)
+ ✓ Compiled in 1ms (529 modules)
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 2008ms
+ GET /?sortBy=date&sortOrder=desc&startDate=2025-10-05&endDate=2025-10-05 200 in 142ms
+ GET /api/expenses?page=1&pageSize=10&search=&startDate=2025-10-05&endDate=2025-10-05&sortBy=date&sortOrder=desc 200 in 3264ms
+ GET /?sortBy=date&sortOrder=desc 200 in 136ms
+ GET /?sortBy=date&sortOrder=desc 200 in 33ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1840ms
+ GET /?sortBy=date&sortOrder=desc&tags=ENTERTAINMENT 200 in 129ms
+ GET /?sortBy=date&sortOrder=desc&tags=ENTERTAINMENT 200 in 158ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=ENTERTAINMENT&sortBy=date&sortOrder=desc 200 in 1266ms
+ GET /?sortBy=date&sortOrder=desc 200 in 518ms
+ GET /?sortBy=date&sortOrder=desc 200 in 285ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 832ms
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 112ms
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 113ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&sortBy=date&sortOrder=desc 200 in 651ms
+ ✓ Compiled in 2s (839 modules)
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 528ms
+ ✓ Compiled in 1466ms (839 modules)
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 374ms
+ ✓ Compiled in 1199ms (750 modules)
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 795ms
+ ✓ Compiled /api/expenses in 448ms (527 modules)
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 1561ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&sortBy=date&sortOrder=desc 200 in 3215ms
+ ✓ Compiled in 2.2s (839 modules)
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 1133ms
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 367ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&sortBy=date&sortOrder=desc 200 in 2368ms
+ ✓ Compiled in 2.7s (839 modules)
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 762ms
+ GET /?sortBy=date&sortOrder=desc 200 in 1871ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&sortBy=date&sortOrder=desc 200 in 3054ms
+ ✓ Compiled in 1431ms (839 modules)
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 638ms
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 688ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1030ms (529 modules)
+ GET /favicon.ico 200 in 1777ms
+ GET /?sortBy=date&sortOrder=desc&tags=TRAVEL 200 in 1300ms
+ GET /favicon.ico 200 in 104ms
+ GET /api/expenses?page=1&pageSize=10&search=&tags=TRAVEL&sortBy=date&sortOrder=desc 200 in 3217ms
+ GET /?sortBy=date&sortOrder=desc 200 in 79ms
+ GET /?sortBy=date&sortOrder=desc 200 in 115ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1151ms
+ GET /?sortBy=date&sortOrder=desc&minAmount=100&maxAmount=5000 200 in 67ms
+ GET /?sortBy=date&sortOrder=desc&minAmount=100&maxAmount=5000 200 in 66ms
+ GET /api/expenses?page=1&pageSize=10&search=&minAmount=100&maxAmount=5000&sortBy=date&sortOrder=desc 200 in 1166ms
+ ✓ Compiled in 3.2s (750 modules)
+ GET /?sortBy=date&sortOrder=desc&minAmount=100&maxAmount=5000 200 in 592ms
+ ○ Compiling /api/expenses ...
+ ✓ Compiled /api/expenses in 751ms (527 modules)
+ GET /?sortBy=date&sortOrder=desc&minAmount=100&maxAmount=5000 200 in 1761ms
+ GET /api/expenses?page=1&pageSize=10&search=&minAmount=100&maxAmount=5000&sortBy=date&sortOrder=desc 200 in 3949ms
+ ✓ Compiled in 1363ms (839 modules)
+ GET /?sortBy=date&sortOrder=desc&minAmount=100&maxAmount=5000 200 in 1405ms
+ GET /?sortBy=date&sortOrder=desc&minAmount=100&maxAmount=5000 200 in 210ms
+ GET /api/expenses?page=1&pageSize=10&search=&minAmount=100&maxAmount=5000&sortBy=date&sortOrder=desc 200 in 2388ms
+ ✓ Compiled in 1374ms (839 modules)
+ GET /?sortBy=date&sortOrder=desc&minAmount=100&maxAmount=5000 200 in 160ms
+ GET /?sortBy=date&sortOrder=desc&minAmount=100&maxAmount=5000 200 in 1155ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /api/expenses in 3.4s (455 modules)
+ ✓ Compiled (529 modules)
+ GET /favicon.ico 200 in 4828ms
+ GET /?sortBy=date&sortOrder=desc&minAmount=100&maxAmount=5000 200 in 2885ms
+ GET /favicon.ico 200 in 52ms
+ GET /api/expenses?page=1&pageSize=10&search=&minAmount=100&maxAmount=5000&sortBy=date&sortOrder=desc 200 in 6505ms
+ GET /?sortBy=date&sortOrder=desc 200 in 75ms
+ GET /?sortBy=date&sortOrder=desc 200 in 196ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1215ms
+ ✓ Compiled in 1906ms (841 modules)
+ ✓ Compiled in 3ms (529 modules)
+ ✓ Compiled in 20ms (529 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 1457ms
+ ✓ Compiled in 3ms (529 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 1025ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 4088ms
+ ✓ Compiled in 2.9s (750 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 652ms
+ ✓ Compiled /api/expenses in 483ms (527 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 1920ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 3895ms
+ ✓ Compiled in 1584ms (839 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 566ms
+ GET /?sortBy=date&sortOrder=desc 200 in 151ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 2097ms
+ ✓ Compiled in 1559ms (839 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 351ms
+ GET /?sortBy=date&sortOrder=desc 200 in 71ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 1793ms
+ GET /?sortBy=date&sortOrder=desc 200 in 1160ms
+ ✓ Compiled in 3.4s (911 modules)
+ ✓ Compiled /api/expenses in 401ms (506 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 1327ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 3506ms
+ ✓ Compiled in 1552ms (729 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 391ms
+ ✓ Compiled /api/expenses in 361ms (506 modules)
+ POST /api/expenses 201 in 1483ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 1054ms
+ GET /?sortBy=date&sortOrder=desc 200 in 616ms
+ GET /?sortBy=date&sortOrder=desc 200 in 115ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 701ms
+ GET /api/expenses?page=2&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 746ms
+ GET /api/expenses?page=3&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 637ms
+ GET /?sortBy=date&sortOrder=desc&tags=SALARY 200 in 60ms
+ GET /?sortBy=date&sortOrder=desc&tags=SALARY 200 in 63ms
+ GET /api/expenses?page=3&pageSize=10&search=&tags=SALARY&sortBy=date&sortOrder=desc 200 in 1238ms
+ POST /api/expenses 500 in 132ms
+ GET /?sortBy=date&sortOrder=desc 200 in 98ms
+ GET /?sortBy=date&sortOrder=desc 200 in 164ms
+ GET /api/expenses?page=3&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 737ms
+ GET /?sortBy=date&sortOrder=desc 200 in 289ms
+ GET /?sortBy=date&sortOrder=desc 200 in 67ms
+ GET /api/expenses?page=1&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 797ms
+ POST /api/expenses 500 in 125ms
+ POST /api/expenses 500 in 119ms
+ GET /api/expenses?page=2&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 649ms
+ GET /api/expenses?page=3&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 646ms
+ GET /api/expenses?page=2&pageSize=10&search=&sortBy=date&sortOrder=desc 200 in 632ms
+ ○ Compiling /api/expenses/[id] ...
+ ✓ Compiled /api/expenses/[id] in 1455ms (820 modules)
+ GET /?sortBy=date&sortOrder=desc 200 in 148ms
+ PUT /api/expenses/56 500 in 4489ms
+ PUT /api/expenses/56 500 in 125ms
+ ○ Compiling /api/auth/logout ...
+ ✓ Compiled /api/auth/logout in 1451ms (827 modules)
+Error: Route "/api/auth/logout" used `cookies().set('token', ...)`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at createCookiesAccessError (..\..\src\server\request\cookies.ts:529:10)
+    at syncIODev (..\..\src\server\request\cookies.ts:517:3)
+    at Promise.set (..\..\src\server\request\cookies.ts:379:9)
+    at POST (src\app\api\auth\logout\route.js:6:15)
+  527 | ) {
+  528 |   const prefix = route ? `Route "${route}" ` : 'This route '
+> 529 |   return new Error(
+      |          ^
+  530 |     `${prefix}used ${expression}. ` +
+  531 |       `\`cookies()\` should be awaited before using its value. ` +
+  532 |       `Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis`
+ POST /api/auth/logout 200 in 1982ms
+ GET /?sortBy=date&sortOrder=desc 200 in 376ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 1697ms (820 modules)
+ GET /login 200 in 2169ms
+ GET /login 200 in 260ms
+ GET /login 200 in 76ms
+ ○ Compiling /api/auth/login ...
+ ✓ Compiled /api/auth/login in 896ms (837 modules)
+ GET /login 200 in 153ms
+Error: Route "/api/auth/login" used `cookies().set('token', ...)`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at createCookiesAccessError (..\..\src\server\request\cookies.ts:529:10)
+    at syncIODev (..\..\src\server\request\cookies.ts:517:3)
+    at Promise.set (..\..\src\server\request\cookies.ts:379:9)
+    at POST (src\app\api\auth\login\route.js:38:15)
+  527 | ) {
+  528 |   const prefix = route ? `Route "${route}" ` : 'This route '
+> 529 |   return new Error(
+      |          ^
+  530 |     `${prefix}used ${expression}. ` +
+  531 |       `\`cookies()\` should be awaited before using its value. ` +
+  532 |       `Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis`
+ POST /api/auth/login 200 in 2856ms
+ GET / 200 in 67ms
+ GET / 200 in 120ms
+ GET / 200 in 56ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 1099ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 628ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 625ms
+ PUT /api/expenses/56 500 in 238ms
+ ✓ Compiled in 2.2s (736 modules)
+ GET / 200 in 484ms
+ ✓ Compiled /api/expenses in 421ms (511 modules)
+ GET / 200 in 1174ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 2780ms
+ ✓ Compiled in 954ms (825 modules)
+ ✓ Compiled in 3ms (511 modules)
+ ✓ Compiled in 1ms (511 modules)
+ GET / 200 in 961ms
+ ✓ Compiled in 1ms (511 modules)
+ GET / 200 in 683ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 3239ms
+ ✓ Compiled in 2.2s (825 modules)
+ GET / 200 in 359ms
+ GET / 200 in 461ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 1784ms
+ POST /api/expenses 201 in 310ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 598ms
+ GET / 200 in 837ms
+ GET / 200 in 213ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 1214ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 716ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 607ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 599ms
+ ○ Compiling /api/expenses/[id] ...
+ ✓ Compiled /api/expenses/[id] in 539ms (513 modules)
+ PUT /api/expenses/56 200 in 1847ms
+ GET /api/expenses?page=2&pageSize=10&search= 200 in 1067ms
+ GET / 200 in 548ms
+ GET / 200 in 74ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 816ms
+ PUT /api/expenses/52 200 in 234ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 629ms
+ POST /api/expenses 201 in 345ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 645ms
+ GET / 200 in 283ms
+ GET / 200 in 107ms
+ GET /api/expenses?page=1&pageSize=10&search= 200 in 792ms
+ ✓ Compiled in 47s (736 modules)
+ ✓ Compiled in 3.1s (314 modules)
+ ✓ Compiled in 870ms (314 modules)
+ ✓ Compiled in 791ms (314 modules)
+ ✓ Compiled in 13.6s (737 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 4.3s (728 modules)
+ ⨯ Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\server\vendor-chunks\next.js'
+    at <unknown> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\_not-found\page.js:227:47)
+    at Object.<anonymous> (F:\SHIPSY PROJECT\expense-tracker-app\.next\server\app\_not-found\page.js:230:3) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\server\\vendor-chunks\\next.js'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 7.7s (1068 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+ GET / 500 in 33669ms
+ GET / 500 in 488ms
+ ✓ Compiled in 26.6s (984 modules)
+ ✓ Compiled in 1636ms (1166 modules)
+ ✓ Compiled in 331ms (465 modules)
+ ✓ Compiled in 340ms (465 modules)
+ ✓ Compiled in 324ms (465 modules)
+ ✓ Compiled in 344ms (465 modules)
+ ✓ Compiled in 467ms (465 modules)
+ ✓ Compiled in 222ms (465 modules)
+ ✓ Compiled in 201ms (465 modules)
+ ✓ Compiled in 470ms (465 modules)
+ ✓ Compiled in 234ms (465 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 4.3s (975 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1601ms (1068 modules)
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+ GET /swagger-ui 500 in 8482ms
+ GET /swagger-ui 500 in 817ms
+ ○ Compiling /api/doc ...
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 8.9s
+ ○ Compiling /api/doc ...
+ ✓ Compiled /api/doc in 31.3s (2455 modules)
+ ○ Compiling /api/doc ...
+ ✓ Compiled /api/doc in 7s (2699 modules)
+ GET /api/doc 200 in 39459ms
+ GET /api/doc 200 in 519ms
+ GET /api/doc 200 in 120ms
+ ✓ Compiled in 3.6s (2131 modules)
+ ✓ Compiled in 386ms (2131 modules)
+ ⨯ ./node_modules/swagger-ui-react/swagger-ui.css
+Module not found: Can't resolve 'F:\SHIPSY PROJECT\expense-tracker-app\node_modules\swagger-ui-react\swagger-ui.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/swagger-ui-react/swagger-ui.css
+Module not found: Can't resolve 'F:\SHIPSY PROJECT\expense-tracker-app\node_modules\swagger-ui-react\swagger-ui.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\webpack\loaders\next-flight-css-loader.js??ruleSet[1].rules[14].oneOf[10].use[0]!F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\compiled\mini-css-extract-plugin\loader.js??ruleSet[1].rules[14].oneOf[10].use[1]!F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[10].use[2]!F:\SHIPSY PROJECT\expense-tracker-app\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[10].use[3]!F:\SHIPSY PROJECT\expense-tracker-app\node_modules\swagger-ui-react\swagger-ui.css|app-pages-browser': No serializer registered for ModuleNotFoundError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> ModuleNotFoundError
+ ○ Compiling /api/doc ...
+ ⨯ ./src/app/api/doc/page.js:4:1
+Module not found: Can't resolve 'swagger-ui-react'
+  2 |
+  3 | import { getApiDocs } from '@/lib/swagger';
+> 4 | import SwaggerUI from 'swagger-ui-react';
+    | ^
+  5 | import 'swagger-ui-react/swagger-ui.css';
+  6 |
+  7 | function ReactSwagger({ spec }) {
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ GET /api/doc 500 in 6911ms
+Terminate batch job (Y/N)?
+^C
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.9s
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ○ Compiling /api/doc ...
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ GET /api/doc 500 in 1265ms
+Terminate batch job (Y/N)?
+n
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 3s
+ ○ Compiling /api/doc ...
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ GET /api/doc 500 in 7070ms
+ GET /api/doc 500 in 86ms
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./node_modules/fs.realpath/index.js:8:1
+Module not found: Can't resolve 'fs'
+   6 | realpath.unmonkeypatch = unmonkeypatch
+   7 |
+>  8 | var fs = require('fs')
+     | ^
+   9 | var origRealpath = fs.realpath
+  10 | var origRealpathSync = fs.realpathSync
+  11 |
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/glob/glob.js
+./node_modules/swagger-jsdoc/src/utils.js
+./node_modules/swagger-jsdoc/src/specification.js
+./node_modules/swagger-jsdoc/src/lib.js
+./node_modules/swagger-jsdoc/index.js
+./node_modules/next-swagger-doc/dist/index.js
+./src/lib/swagger.js
+./src/app/api/doc/page.js
+ ⨯ ./src/components/SwaggerUIView.js:3:1
+Module not found: Can't resolve 'swagger-ui-react'
+  1 | 'use client';
+  2 |
+> 3 | import SwaggerUI from 'swagger-ui-react';
+    | ^
+  4 | import 'swagger-ui-react/swagger-ui.css';
+  5 |
+  6 | export default function SwaggerUIView({ spec }) {
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ [Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\routes-manifest.json'
+}
+ GET /api/doc 500 in 506ms
+ GET /api/doc 500 in 73ms
+ ✓ Compiled /_error in 4.7s (2494 modules)
+ ✓ Compiled in 744ms (2284 modules)
+[Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\server-development\19.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\cache\\webpack\\server-development\\19.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\server-development\19.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\cache\\webpack\\server-development\\19.pack.gz'
+}
+ ⨯ unhandledRejection:  [Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\server-development\19.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\cache\\webpack\\server-development\\19.pack.gz'
+}
+[Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\server-development\28.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\cache\\webpack\\server-development\\28.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\server-development\28.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\cache\\webpack\\server-development\\28.pack.gz'
+}
+ ⨯ unhandledRejection:  [Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\server-development\28.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\cache\\webpack\\server-development\\28.pack.gz'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\server-development\19.pack.gz'
+[Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\client-development\6.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\cache\\webpack\\client-development\\6.pack.gz'
+}
+ ⨯ unhandledRejection: [Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\client-development\6.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\cache\\webpack\\client-development\\6.pack.gz'
+}
+ ⨯ unhandledRejection:  [Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\client-development\6.pack.gz'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\cache\\webpack\\client-development\\6.pack.gz'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat 'F:\SHIPSY PROJECT\expense-tracker-app\.next\cache\webpack\client-development\6.pack.gz'
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.6s
+ ○ Compiling /api/doc ...
+ ✓ Compiled /api/doc in 22.2s (2728 modules)
+ GET /api/doc 200 in 24782ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 5.1s (2702 modules)
+ GET /api/favicon.svg 404 in 5905ms
+ GET /api/doc 200 in 1072ms
+ GET /api/doc 200 in 1235ms
+ GET /api/doc 200 in 534ms
+ GET /api/doc 200 in 512ms
+ GET /api/doc 200 in 271ms
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 2.7s
+ ○ Compiling /api/doc ...
+ ✓ Compiled /api/doc in 5.1s (2683 modules)
+ GET /api/doc 200 in 10881ms
+ GET /api/doc 200 in 428ms
+ ✓ Compiled in 6.8s (2130 modules)
+ GET /api/doc 200 in 824ms
+ ✓ Compiled in 1992ms (2130 modules)
+ GET /api/doc 200 in 535ms
+ ✓ Compiled in 10.5s (2686 modules)
+ GET /api/doc 200 in 4898ms
+
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run dev
+
+> expense-tracker-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.36:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 3.5s
+ ○ Compiling /api/doc ...
+ ✓ Compiled /api/doc in 19.2s (2731 modules)
+ GET /api/doc 200 in 20930ms
+ ○ Compiling /api/auth/login ...
+ ✓ Compiled /api/auth/login in 10.2s (2796 modules)
+ GET /api/doc 200 in 6802ms
+Error: Route "/api/auth/login" used `cookies().set('token', ...)`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at createCookiesAccessError (..\..\src\server\request\cookies.ts:529:10)
+    at syncIODev (..\..\src\server\request\cookies.ts:517:3)
+    at Promise.set (..\..\src\server\request\cookies.ts:379:9)
+    at POST (src\app\api\auth\login\route.js:65:15)
+  527 | ) {
+  528 |   const prefix = route ? `Route "${route}" ` : 'This route '
+> 529 |   return new Error(
+      |          ^
+  530 |     `${prefix}used ${expression}. ` +
+  531 |       `\`cookies()\` should be awaited before using its value. ` +
+  532 |       `Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis`
+ POST /api/auth/login 200 in 18616ms
+ ✓ Compiled in 10.3s (2701 modules)
+ GET /api/doc 200 in 1858ms
+ GET /api/doc 200 in 911ms
+ ✓ Compiled in 4.9s (2132 modules)
+ GET /api/doc 200 in 154ms
+ ✓ Compiled in 4.2s (2132 modules)
+Terminate batch job (Y/N)?
+y
+PS F:\SHIPSY PROJECT\expense-tracker-app>

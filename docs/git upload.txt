@@ -1,0 +1,677 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Keshav Goyal> F:
+PS F:\> cd '.\SHIPSY PROJECT\'
+PS F:\SHIPSY PROJECT> cd .\expense-tracker-app\
+PS F:\SHIPSY PROJECT\expense-tracker-app> git init
+Reinitialized existing Git repository in F:/SHIPSY PROJECT/expense-tracker-app/.git/
+PS F:\SHIPSY PROJECT\expense-tracker-app> git log --oneline
+a77a09b (HEAD -> master) Initial commit from Create Next App
+PS F:\SHIPSY PROJECT\expense-tracker-app> git add .
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/app/page.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/app/api/db-version/route.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/lib/db.js', LF will be replaced by CRLF the next time Git touches it
+PS F:\SHIPSY PROJECT\expense-tracker-app> git commit -m "Connect DB"
+[master f1d4a84] Connect DB
+ 5 files changed, 202 insertions(+), 102 deletions(-)
+ create mode 100644 src/app/api/db-version/route.js
+ create mode 100644 src/lib/db.js
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   package-lock.json
+        modified:   package.json
+        modified:   src/app/layout.js
+        modified:   src/app/page.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        prisma/
+        src/app/api/expenses/
+        src/app/api/users/
+        src/lib/prisma.js
+        src/middleware.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS F:\SHIPSY PROJECT\expense-tracker-app> gh
+gh : The term 'gh' is not recognized as the name of a cmdlet, function, script
+file, or operable program. Check the spelling of the name, or if a path was
+included, verify that the path is correct and try again.
+At line:1 char:1
++ gh
++ ~~
+    + CategoryInfo          : ObjectNotFound: (gh:String) [], CommandNotFoundExcep
+   tion
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS F:\SHIPSY PROJECT\expense-tracker-app> git reset --hard
+HEAD is now at 1138d00 Refactor filter and sort UI
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/app/api/expenses/route.js
+        modified:   src/app/page.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS F:\SHIPSY PROJECT\expense-tracker-app> git log --oneline
+1138d00 (HEAD -> master) Refactor filter and sort UI
+83e7758 Implement advanced filtering for expenses
+0d3fbf5 Implement pagination and modal for expenses
+f26475d Implement expense tracking and authentication
+f1d4a84 Connect DB
+a77a09b Initial commit from Create Next App
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+nothing to commit, working tree clean
+PS F:\SHIPSY PROJECT\expense-tracker-app> explorer .
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        docs/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        docs/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS F:\SHIPSY PROJECT\expense-tracker-app> git add .
+PS F:\SHIPSY PROJECT\expense-tracker-app> git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS F:\SHIPSY PROJECT\expense-tracker-app> git -- help
+unknown option: --
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+PS F:\SHIPSY PROJECT\expense-tracker-app> git --help
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+PS F:\SHIPSY PROJECT\expense-tracker-app> git add .
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs/GeminiChat.txt
+
+PS F:\SHIPSY PROJECT\expense-tracker-app> git commit -m "ADD the docs file "
+[master 351a2fa] ADD the docs file
+ 1 file changed, 9053 insertions(+)
+ create mode 100644 docs/GeminiChat.txt
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+nothing to commit, working tree clean
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+nothing to commit, working tree clean
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+nothing to commit, working tree clean
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+nothing to commit, working tree clean
+PS F:\SHIPSY PROJECT\expense-tracker-app> git log --oneline
+29f8edd (HEAD -> master) fix: Correctly handle single tag selection and update branding
+351a2fa ADD the docs file
+9471dd0 feat: Implement pie chart and improve UI
+6f29557 Add Salary tag
+b0e894d Refactor filters and sorting UI
+5a393a9 Remove running amount column and add total amount label
+1138d00 Refactor filter and sort UI
+83e7758 Implement advanced filtering for expenses
+0d3fbf5 Implement pagination and modal for expenses
+f26475d Implement expense tracking and authentication
+f1d4a84 Connect DB
+a77a09b Initial commit from Create Next App
+PS F:\SHIPSY PROJECT\expense-tracker-app> git remote add origin https://github.com/Keshav-Goyal-04/expense-tracker-shipsy-oa.git
+PS F:\SHIPSY PROJECT\expense-tracker-app> git add -A
+PS F:\SHIPSY PROJECT\expense-tracker-app> git push origin master
+Enumerating objects: 160, done.
+Counting objects: 100% (160/160), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (139/139), done.
+Writing objects: 100% (160/160), 194.84 KiB | 3.98 MiB/s, done.
+Total 160 (delta 59), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (59/59), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Keshav-Goyal-04/expense-tracker-shipsy-oa/pull/new/master
+remote:
+To https://github.com/Keshav-Goyal-04/expense-tracker-shipsy-oa.git
+ * [new branch]      master -> master
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS F:\SHIPSY PROJECT\expense-tracker-app> git brach
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+PS F:\SHIPSY PROJECT\expense-tracker-app> git branch
+* master
+PS F:\SHIPSY PROJECT\expense-tracker-app> git switch
+fatal: missing branch or commit argument
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run build
+
+> expense-tracker-app@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.4
+   - Environments: .env.local, .env
+
+   Creating an optimized production build ...
+uncaughtException [Error: EPERM: operation not permitted, open 'F:\SHIPSY PROJECT\expense-tracker-app\.next\trace'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 'F:\\SHIPSY PROJECT\\expense-tracker-app\\.next\\trace'
+}
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run build
+
+> expense-tracker-app@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.4
+   - Environments: .env.local, .env
+
+   Creating an optimized production build ...
+Failed to compile.
+
+src\app\api\doc\page.js
+You cannot have two parallel pages that resolve to the same path. Please check /api/doc/page and /api/doc/route. Refer to the route group docs for more information: https://nextjs.org/docs/app/building-your-application/routing/route-groups
+
+
+> Build failed because of webpack errors
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   package-lock.json
+        modified:   package.json
+        modified:   src/app/api/auth/login/route.js
+        modified:   src/app/api/auth/logout/route.js
+        modified:   src/app/api/auth/register/route.js
+        modified:   src/app/api/expenses/[id]/route.js
+        modified:   src/app/api/expenses/route.js
+        modified:   src/app/layout.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        src/app/api/doc/
+        src/components/SwaggerUIView.js
+        src/components/WarningSuppressor.js
+        src/lib/swagger.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS F:\SHIPSY PROJECT\expense-tracker-app> git add .
+PS F:\SHIPSY PROJECT\expense-tracker-app> git push
+Enumerating objects: 46, done.
+Counting objects: 100% (46/46), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (26/26), 26.86 KiB | 687.00 KiB/s, done.
+Total 26 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 8 local objects.
+To https://github.com/Keshav-Goyal-04/expense-tracker-shipsy-oa.git
+   cff3ff5..bca5101  master -> master
+PS F:\SHIPSY PROJECT\expense-tracker-app> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS F:\SHIPSY PROJECT\expense-tracker-app> git add .
+PS F:\SHIPSY PROJECT\expense-tracker-app> git commit -m "downgrade swagger doc"
+[master f50c3d5] downgrade swagger doc
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+PS F:\SHIPSY PROJECT\expense-tracker-app> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 403 bytes | 100.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/Keshav-Goyal-04/expense-tracker-shipsy-oa.git
+   bca5101..f50c3d5  master -> master
+PS F:\SHIPSY PROJECT\expense-tracker-app> rmdir /s /q .next
+Remove-Item : A positional parameter cannot be found that accepts argument '/q'.
+At line:1 char:1
++ rmdir /s /q .next
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Remove-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+PS F:\SHIPSY PROJECT\expense-tracker-app> Remove-Item -Recurse -Force .next
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run build
+
+> expense-tracker-app@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.4
+   - Environments: .env.local, .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 45s
+ ✓ Linting and checking validity of types
+ ✓ Collecting page data
+ ✓ Generating static pages (13/13)
+ ✓ Collecting build traces
+ ✓ Finalizing page optimization
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                     101 kB         202 kB
+├ ○ /_not-found                            997 B         103 kB
+├ ƒ /api/auth/login                        142 B         102 kB
+├ ƒ /api/auth/logout                       142 B         102 kB
+├ ƒ /api/auth/register                     142 B         102 kB
+├ ƒ /api/db-version                        142 B         102 kB
+├ ○ /api/doc                              361 kB         463 kB
+├ ƒ /api/expenses                          142 B         102 kB
+├ ƒ /api/expenses/[id]                     142 B         102 kB
+├ ƒ /api/users                             142 B         102 kB
+├ ○ /login                                 994 B         103 kB
+└ ○ /register                            1.02 kB         103 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/255-432738ff73abe468.js       45.4 kB
+  ├ chunks/4bd1b696-1c88c00269cf164c.js  54.2 kB
+  └ other shared chunks (total)          2.05 kB
+
+
+ƒ Middleware                             39.6 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+PS F:\SHIPSY PROJECT\expense-tracker-app> dir
+
+
+    Directory: F:\SHIPSY PROJECT\expense-tracker-app
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        06-10-2025     00:15                .next
+d-----        05-10-2025     18:51                docs
+d-----        05-10-2025     23:03                node_modules
+d-----        05-10-2025     13:49                prisma
+d-----        05-10-2025     19:48                public
+d-----        05-10-2025     17:07                src
+-a----        05-10-2025     13:48           1416 .env
+-a----        05-10-2025     14:17            193 .env.local
+-a----        05-10-2025     13:48            503 .gitignore
+-a----        05-10-2025     13:28            505 eslint.config.mjs
+-a----        05-10-2025     13:28             77 jsconfig.json
+-a----        05-10-2025     13:28             92 next.config.mjs
+-a----        06-10-2025     00:03         332368 package-lock.json
+-a----        06-10-2025     00:03            840 package.json
+-a----        05-10-2025     13:28             81 postcss.config.mjs
+-a----        05-10-2025     13:28           1458 README.md
+
+
+PS F:\SHIPSY PROJECT\expense-tracker-app> dir .next
+
+
+    Directory: F:\SHIPSY PROJECT\expense-tracker-app\.next
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        06-10-2025     00:15                cache
+d-----        06-10-2025     00:13                diagnostics
+d-----        06-10-2025     00:15                server
+d-----        06-10-2025     00:14                static
+d-----        06-10-2025     00:14                types
+-a----        06-10-2025     00:14           4222 app-build-manifest.json
+-a----        06-10-2025     00:15            468 app-path-routes-manifest.json
+-a----        06-10-2025     00:14            995 build-manifest.json
+-a----        06-10-2025     00:15             21 BUILD_ID
+-a----        06-10-2025     00:15            111 export-marker.json
+-a----        06-10-2025     00:15            868 images-manifest.json
+-a----        06-10-2025     00:15           7772 next-minimal-server.js.nft.json
+-a----        06-10-2025     00:15          42905 next-server.js.nft.json
+-a----        06-10-2025     00:13             20 package.json
+-a----        06-10-2025     00:15           3399 prerender-manifest.json
+-a----        06-10-2025     00:14            324 react-loadable-manifest.json
+-a----        06-10-2025     00:15           8954 required-server-files.json
+-a----        06-10-2025     00:15           1805 routes-manifest.json
+-a----        06-10-2025     00:15        1027183 trace
+
+
+PS F:\SHIPSY PROJECT\expense-tracker-app> git checkout bca^C
+PS F:\SHIPSY PROJECT\expense-tracker-app> Remove-Item -Recurse -Force .next
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm run build
+
+> expense-tracker-app@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.4
+   - Environments: .env.local, .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 22.0s
+ ✓ Linting and checking validity of types
+ ✓ Collecting page data
+ ✓ Generating static pages (13/13)
+ ✓ Collecting build traces
+ ✓ Finalizing page optimization
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                     101 kB         202 kB
+├ ○ /_not-found                            997 B         103 kB
+├ ƒ /api/auth/login                        142 B         102 kB
+├ ƒ /api/auth/logout                       142 B         102 kB
+├ ƒ /api/auth/register                     142 B         102 kB
+├ ƒ /api/db-version                        142 B         102 kB
+├ ○ /api/doc                              361 kB         463 kB
+├ ƒ /api/expenses                          142 B         102 kB
+├ ƒ /api/expenses/[id]                     142 B         102 kB
+├ ƒ /api/users                             142 B         102 kB
+├ ○ /login                                 994 B         103 kB
+└ ○ /register                            1.02 kB         103 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/255-432738ff73abe468.js       45.4 kB
+  ├ chunks/4bd1b696-1c88c00269cf164c.js  54.2 kB
+  └ other shared chunks (total)          2.05 kB
+
+
+ƒ Middleware                             39.6 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+PS F:\SHIPSY PROJECT\expense-tracker-app>
+PS F:\SHIPSY PROJECT\expense-tracker-app> dir  .next
+
+
+    Directory: F:\SHIPSY PROJECT\expense-tracker-app\.next
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        06-10-2025     00:18                cache
+d-----        06-10-2025     00:17                diagnostics
+d-----        06-10-2025     00:18                server
+d-----        06-10-2025     00:18                static
+d-----        06-10-2025     00:18                types
+-a----        06-10-2025     00:18           4222 app-build-manifest.json
+-a----        06-10-2025     00:18            468 app-path-routes-manifest.json
+-a----        06-10-2025     00:18            995 build-manifest.json
+-a----        06-10-2025     00:18             21 BUILD_ID
+-a----        06-10-2025     00:18            111 export-marker.json
+-a----        06-10-2025     00:18            868 images-manifest.json
+-a----        06-10-2025     00:18           7772 next-minimal-server.js.nft.json
+-a----        06-10-2025     00:18          42905 next-server.js.nft.json
+-a----        06-10-2025     00:17             20 package.json
+-a----        06-10-2025     00:18           3399 prerender-manifest.json
+-a----        06-10-2025     00:18            324 react-loadable-manifest.json
+-a----        06-10-2025     00:18           8954 required-server-files.json
+-a----        06-10-2025     00:18           1805 routes-manifest.json
+-a----        06-10-2025     00:18        1026489 trace
+
+
+PS F:\SHIPSY PROJECT\expense-tracker-app> git checkout master
+Previous HEAD position was bca5101 feat: Add Swagger UI and fix build errors
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm uninstall next-swagger-doc
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: react-copy-to-clipboard@5.1.0
+npm warn Found: react@19.1.0
+npm warn node_modules/react
+npm warn   peer react@">=16.8.0" from @emotion/react@11.14.0
+npm warn   node_modules/@emotion/react
+npm warn     @emotion/react@"^11.8.1" from react-select@5.10.2
+npm warn     node_modules/react-select
+npm warn   15 more (@emotion/use-insertion-effect-with-fallbacks, next, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^15.3.0 || 16 || 17 || 18" from react-copy-to-clipboard@5.1.0
+npm warn node_modules/swagger-ui-react/node_modules/react-copy-to-clipboard
+npm warn   react-copy-to-clipboard@"5.1.0" from swagger-ui-react@5.29.3
+npm warn   node_modules/swagger-ui-react
+npm warn
+npm warn Conflicting peer dependency: react@18.3.1
+npm warn node_modules/react
+npm warn   peer react@"^15.3.0 || 16 || 17 || 18" from react-copy-to-clipboard@5.1.0
+npm warn   node_modules/swagger-ui-react/node_modules/react-copy-to-clipboard
+npm warn     react-copy-to-clipboard@"5.1.0" from swagger-ui-react@5.29.3
+npm warn     node_modules/swagger-ui-react
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: react-debounce-input@3.3.0
+npm warn Found: react@19.1.0
+npm warn node_modules/react
+npm warn   peer react@">=16.8.0" from @emotion/react@11.14.0
+npm warn   node_modules/@emotion/react
+npm warn     @emotion/react@"^11.8.1" from react-select@5.10.2
+npm warn     node_modules/react-select
+npm warn   15 more (@emotion/use-insertion-effect-with-fallbacks, next, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^15.3.0 || 16 || 17 || 18" from react-debounce-input@3.3.0
+npm warn node_modules/swagger-ui-react/node_modules/react-debounce-input
+npm warn   react-debounce-input@"=3.3.0" from swagger-ui-react@5.29.3
+npm warn   node_modules/swagger-ui-react
+npm warn
+npm warn Conflicting peer dependency: react@18.3.1
+npm warn node_modules/react
+npm warn   peer react@"^15.3.0 || 16 || 17 || 18" from react-debounce-input@3.3.0
+npm warn   node_modules/swagger-ui-react/node_modules/react-debounce-input
+npm warn     react-debounce-input@"=3.3.0" from swagger-ui-react@5.29.3
+npm warn     node_modules/swagger-ui-react
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: react-inspector@6.0.2
+npm warn Found: react@19.1.0
+npm warn node_modules/react
+npm warn   peer react@">=16.8.0" from @emotion/react@11.14.0
+npm warn   node_modules/@emotion/react
+npm warn     @emotion/react@"^11.8.1" from react-select@5.10.2
+npm warn     node_modules/react-select
+npm warn   15 more (@emotion/use-insertion-effect-with-fallbacks, next, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^16.8.4 || ^17.0.0 || ^18.0.0" from react-inspector@6.0.2
+npm warn node_modules/swagger-ui-react/node_modules/react-inspector
+npm warn   react-inspector@"^6.0.1" from swagger-ui-react@5.29.3
+npm warn   node_modules/swagger-ui-react
+npm warn
+npm warn Conflicting peer dependency: react@18.3.1
+npm warn node_modules/react
+npm warn   peer react@"^16.8.4 || ^17.0.0 || ^18.0.0" from react-inspector@6.0.2
+npm warn   node_modules/swagger-ui-react/node_modules/react-inspector
+npm warn     react-inspector@"^6.0.1" from swagger-ui-react@5.29.3
+npm warn     node_modules/swagger-ui-react
+
+removed 29 packages, and audited 578 packages in 4s
+
+174 packages are looking for funding
+  run `npm fund` for details
+
+4 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm i next-swagger-doc
+\^CTerminate batch job (Y/N)? y
+PS F:\SHIPSY PROJECT\expense-tracker-app> next-swagger-doc^C
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm i next-swagger-doc@0.4.p0
+|^CTerminate batch job (Y/N)? y
+PS F:\SHIPSY PROJECT\expense-tracker-app> npm i next-swagger-doc@0.4.0
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: react-copy-to-clipboard@5.1.0
+npm warn Found: react@19.1.0
+npm warn node_modules/react
+npm warn   peer react@">=16.8.0" from @emotion/react@11.14.0
+npm warn   node_modules/@emotion/react
+npm warn     @emotion/react@"^11.8.1" from react-select@5.10.2
+npm warn     node_modules/react-select
+npm warn   15 more (@emotion/use-insertion-effect-with-fallbacks, next, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^15.3.0 || 16 || 17 || 18" from react-copy-to-clipboard@5.1.0
+npm warn node_modules/swagger-ui-react/node_modules/react-copy-to-clipboard
+npm warn   react-copy-to-clipboard@"5.1.0" from swagger-ui-react@5.29.3
+npm warn   node_modules/swagger-ui-react
+npm warn
+npm warn Conflicting peer dependency: react@18.3.1
+npm warn node_modules/react
+npm warn   peer react@"^15.3.0 || 16 || 17 || 18" from react-copy-to-clipboard@5.1.0
+npm warn   node_modules/swagger-ui-react/node_modules/react-copy-to-clipboard
+npm warn     react-copy-to-clipboard@"5.1.0" from swagger-ui-react@5.29.3
+npm warn     node_modules/swagger-ui-react
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: react-debounce-input@3.3.0
+npm warn Found: react@19.1.0
+npm warn node_modules/react
+npm warn   peer react@">=16.8.0" from @emotion/react@11.14.0
+npm warn   node_modules/@emotion/react
+npm warn     @emotion/react@"^11.8.1" from react-select@5.10.2
+npm warn     node_modules/react-select
+npm warn   15 more (@emotion/use-insertion-effect-with-fallbacks, next, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^15.3.0 || 16 || 17 || 18" from react-debounce-input@3.3.0
+npm warn node_modules/swagger-ui-react/node_modules/react-debounce-input
+npm warn   react-debounce-input@"=3.3.0" from swagger-ui-react@5.29.3
+npm warn   node_modules/swagger-ui-react
+npm warn
+npm warn Conflicting peer dependency: react@18.3.1
+npm warn node_modules/react
+npm warn   peer react@"^15.3.0 || 16 || 17 || 18" from react-debounce-input@3.3.0
+npm warn   node_modules/swagger-ui-react/node_modules/react-debounce-input
+npm warn     react-debounce-input@"=3.3.0" from swagger-ui-react@5.29.3
+npm warn     node_modules/swagger-ui-react
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: react-inspector@6.0.2
+npm warn Found: react@19.1.0
+npm warn node_modules/react
+npm warn   peer react@">=16.8.0" from @emotion/react@11.14.0
+npm warn   node_modules/@emotion/react
+npm warn     @emotion/react@"^11.8.1" from react-select@5.10.2
+npm warn     node_modules/react-select
+npm warn   15 more (@emotion/use-insertion-effect-with-fallbacks, next, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^16.8.4 || ^17.0.0 || ^18.0.0" from react-inspector@6.0.2
+npm warn node_modules/swagger-ui-react/node_modules/react-inspector
+npm warn   react-inspector@"^6.0.1" from swagger-ui-react@5.29.3
+npm warn   node_modules/swagger-ui-react
+npm warn
+npm warn Conflicting peer dependency: react@18.3.1
+npm warn node_modules/react
+npm warn   peer react@"^16.8.4 || ^17.0.0 || ^18.0.0" from react-inspector@6.0.2
+npm warn   node_modules/swagger-ui-react/node_modules/react-inspector
+npm warn     react-inspector@"^6.0.1" from swagger-ui-react@5.29.3
+npm warn     node_modules/swagger-ui-react
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated glob@7.1.6: Glob versions prior to v9 are no longer supported
+
+added 29 packages, and audited 607 packages in 7s
+
+178 packages are looking for funding
+  run `npm fund` for details
+
+4 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+PS F:\SHIPSY PROJECT\expense-tracker-app> git add .
+PS F:\SHIPSY PROJECT\expense-tracker-app> git commit -m "downgrade swagger doc"
+[master db92f7a] downgrade swagger doc
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+PS F:\SHIPSY PROJECT\expense-tracker-app> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 573 bytes | 143.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Keshav-Goyal-04/expense-tracker-shipsy-oa.git
+   f50c3d5..db92f7a  master -> master
+PS F:\SHIPSY PROJECT\expense-tracker-app>
