@@ -106,6 +106,7 @@ export default function Home() {
     isCredit: 'all',
   });
   const [sortOption, setSortOption] = useState('date-desc');
+  const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
     const tags = searchParams.get('tags');
@@ -173,6 +174,7 @@ export default function Home() {
       } else {
         setExpenses(data.expenses);
         setPagination(data.pagination);
+        setTotalAmount(data.totalAmount);
       }
     } catch (error) {
       setError(error.message);
@@ -575,7 +577,12 @@ export default function Home() {
         </Modal>
 
         <div>
-          <h2 className="text-2xl font-bold mb-4">Your Expenses</h2>
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-2xl font-bold">Your Expenses</h2>
+            <div className="text-2xl font-bold">
+              Total: <span className={totalAmount >= 0 ? 'text-green-500' : 'text-red-500'}>₹{totalAmount}</span>
+            </div>
+          </div>
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-4">
               <input

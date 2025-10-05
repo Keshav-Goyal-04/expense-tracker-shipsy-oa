@@ -77,7 +77,7 @@ export async function GET(req) {
     }
     orderBy.push({ createdAt: 'desc' });
 
-    const [expenses, totalExpenses] = await prisma.$transaction([
+    const [expenses, totalExpenses, totalAmountResult] = await prisma.$transaction([
       prisma.expense.findMany({
         where,
         orderBy,
@@ -87,7 +87,18 @@ export async function GET(req) {
       prisma.expense.count({
         where,
       }),
+      prisma.expense.groupBy({
+        by: ['isCredit'],
+        where,
+        _sum: {
+          amount: true,
+        },
+      }),
     ]);
+
+    const totalCredit = totalAmountResult.find(item => item.isCredit === true)?._sum.amount || 0;
+    const totalDebit = totalAmountResult.find(item => item.isCredit === false)?._sum.amount || 0;
+    const totalAmount = totalCredit - totalDebit;
 
     const totalPages = Math.ceil(totalExpenses / pageSize);
 
@@ -99,6 +110,7 @@ export async function GET(req) {
         totalExpenses,
         totalPages,
       },
+      totalAmount,
     });
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
