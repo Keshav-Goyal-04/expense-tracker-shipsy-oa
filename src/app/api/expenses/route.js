@@ -26,15 +26,52 @@ export async function GET(req) {
     const { searchParams } = new URL(req.url);
     const page = parseInt(searchParams.get('page') || '1');
     const pageSize = parseInt(searchParams.get('pageSize') || '10');
+    const search = searchParams.get('search') || '';
+    const tags = searchParams.get('tags')?.split(',');
+    const startDate = searchParams.get('startDate');
+    const endDate = searchParams.get('endDate');
+    const minAmount = searchParams.get('minAmount');
+    const maxAmount = searchParams.get('maxAmount');
+    const isCredit = searchParams.get('isCredit');
 
     const skip = (page - 1) * pageSize;
     const take = pageSize;
 
+    const where = {
+      authorId: userId,
+      AND: [
+        search
+          ? {
+              OR: [
+                {
+                  title: {
+                    contains: search,
+                    mode: 'insensitive',
+                  },
+                },
+                {
+                  description: {
+                    contains: search,
+                    mode: 'insensitive',
+                  },
+                },
+              ],
+            }
+          : {},
+        tags ? { tag: { in: tags } } : {},
+        startDate ? { date: { gte: new Date(startDate) } } : {},
+        endDate ? { date: { lte: new Date(endDate) } } : {},
+        minAmount ? { amount: { gte: parseFloat(minAmount) } } : {},
+        maxAmount ? { amount: { lte: parseFloat(maxAmount) } } : {},
+        isCredit !== null && isCredit !== 'all'
+          ? { isCredit: isCredit === 'true' }
+          : {},
+      ],
+    };
+
     const [expenses, totalExpenses] = await prisma.$transaction([
       prisma.expense.findMany({
-        where: {
-          authorId: userId,
-        },
+        where,
         orderBy: [
           {
             date: 'desc',
@@ -47,9 +84,7 @@ export async function GET(req) {
         take,
       }),
       prisma.expense.count({
-        where: {
-          authorId: userId,
-        },
+        where,
       }),
     ]);
 
