@@ -33,6 +33,8 @@ export async function GET(req) {
     const minAmount = searchParams.get('minAmount');
     const maxAmount = searchParams.get('maxAmount');
     const isCredit = searchParams.get('isCredit');
+    const sortBy = searchParams.get('sortBy') || 'date';
+    const sortOrder = searchParams.get('sortOrder') || 'desc';
 
     const skip = (page - 1) * pageSize;
     const take = pageSize;
@@ -69,17 +71,16 @@ export async function GET(req) {
       ],
     };
 
+    const orderBy = [];
+    if (sortBy) {
+      orderBy.push({ [sortBy]: sortOrder });
+    }
+    orderBy.push({ createdAt: 'desc' });
+
     const [expenses, totalExpenses] = await prisma.$transaction([
       prisma.expense.findMany({
         where,
-        orderBy: [
-          {
-            date: 'desc',
-          },
-          {
-            createdAt: 'desc',
-          },
-        ],
+        orderBy,
         skip,
         take,
       }),

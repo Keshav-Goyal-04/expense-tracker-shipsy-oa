@@ -105,6 +105,7 @@ export default function Home() {
     maxAmount: '',
     isCredit: 'all',
   });
+  const [sortOption, setSortOption] = useState('date-desc');
 
   useEffect(() => {
     const tags = searchParams.get('tags');
@@ -113,6 +114,8 @@ export default function Home() {
     const minAmount = searchParams.get('minAmount');
     const maxAmount = searchParams.get('maxAmount');
     const isCredit = searchParams.get('isCredit');
+    const sortBy = searchParams.get('sortBy') || 'date';
+    const sortOrder = searchParams.get('sortOrder') || 'desc';
 
     const filtersFromURL = {
       tags: tags ? tags.split(',').map(t => ({ value: t, label: t })) : [],
@@ -124,6 +127,7 @@ export default function Home() {
     };
     setAppliedFilters(filtersFromURL);
     setModalFilters(filtersFromURL);
+    setSortOption(`${sortBy}-${sortOrder}`);
   }, [searchParams]);
 
   useEffect(() => {
@@ -144,6 +148,8 @@ export default function Home() {
     const minAmount = searchParams.get('minAmount');
     const maxAmount = searchParams.get('maxAmount');
     const isCredit = searchParams.get('isCredit');
+    const sortBy = searchParams.get('sortBy');
+    const sortOrder = searchParams.get('sortOrder');
 
     let filterQuery = '';
     if (tags) filterQuery += `&tags=${tags}`;
@@ -152,6 +158,8 @@ export default function Home() {
     if (minAmount) filterQuery += `&minAmount=${minAmount}`;
     if (maxAmount) filterQuery += `&maxAmount=${maxAmount}`;
     if (isCredit) filterQuery += `&isCredit=${isCredit}`;
+    if (sortBy) filterQuery += `&sortBy=${sortBy}`;
+    if (sortOrder) filterQuery += `&sortOrder=${sortOrder}`;
 
     fetchExpenses(currentPage, query, filterQuery);
   }, [currentPage, searchParams]);
@@ -183,6 +191,16 @@ export default function Home() {
 
   const handleFilterChange = (name, value) => {
     setModalFilters({ ...modalFilters, [name]: value });
+  };
+
+  const handleSortChange = (e) => {
+    const value = e.target.value;
+    setSortOption(value);
+    const [sortBy, sortOrder] = value.split('-');
+    const params = new URLSearchParams(searchParams);
+    params.set('sortBy', sortBy);
+    params.set('sortOrder', sortOrder);
+    router.push(`?${params.toString()}`);
   };
 
   const applyFilters = () => {
@@ -559,7 +577,7 @@ export default function Home() {
         <div>
           <h2 className="text-2xl font-bold mb-4">Your Expenses</h2>
           <div className="flex justify-between items-center mb-4">
-            <div className="flex items-center">
+            <div className="flex items-center gap-4">
               <input
                 type="text"
                 placeholder="Search"
@@ -567,13 +585,23 @@ export default function Home() {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="p-2 border rounded"
               />
+              <button
+                onClick={() => setIsFilterModalOpen(true)}
+                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+              >
+                Filters
+              </button>
+              <select
+                value={sortOption}
+                onChange={handleSortChange}
+                className="p-2 border rounded"
+              >
+                <option value="date-desc">By latest</option>
+                <option value="date-asc">By oldest</option>
+                <option value="amount-desc">By largest amount</option>
+                <option value="amount-asc">By smallest amount</option>
+              </select>
             </div>
-            <button
-              onClick={() => setIsFilterModalOpen(true)}
-              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
-            >
-              Filters
-            </button>
           </div>
           <FilterSummary filters={appliedFilters} onClear={clearFilters} />
           <div className="overflow-x-auto">
